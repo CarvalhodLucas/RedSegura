@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redes de Protección en Valencia | RedSegura</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="./assets/redsegura-logo.png">
+<link rel="shortcut icon" href="./assets/redsegura-logo.png">
+<link rel="apple-touch-icon" href="./assets/redsegura-logo.png">
+<meta name="description" content="Instalación profesional de redes de protección para balcones, ventanas, terrazas, gatos y niños en Valencia. Resistencia certificada 150 kg/m², 2 años de garantía y presupuesto gratis en 24h por WhatsApp.">
+<meta name="keywords" content="redes de protección valencia, mallas de seguridad valencia, redes para balcones valencia, redes para gatos valencia, seguridad infantil ventanas">
+
+<!-- Open Graph / Social Media -->
+<meta property="og:title" content="Redes de Protección en Valencia | RedSegura">
+<meta property="og:description" content="Protección certificada para niños y gatos en balcones y ventanas. Resistencia 150 kg/m², garantía de 2-3 años y presupuesto sin compromiso en 24h.">
+<meta property="og:type" content="website">
+
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<script src="./safety-animations.js"></script>
+
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://redsegura.es/#business",
+  "name": "RedSegura Valencia",
+  "description": "Instalación de redes de protección y mallas de seguridad para balcones, ventanas y terrazas en Valencia.",
+  "url": "https://redsegura.es",
+  "telephone": "+34627322086",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Valencia",
+    "addressRegion": "Comunidad Valenciana",
+    "addressCountry": "ES"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "128"
+  }
+}
+</script>
+
+<style>
+  body { margin: 0; background: #f8f6f0; position: relative; color: #14283a; }
+  * { box-sizing: border-box; }
+  a { color: #128a98; text-decoration: none; transition: all 0.2s ease; }
+  a:hover { color: #e8672e; }
+  ::selection { background: #e8672e; color: #fff; }
+
+  /* Fundo de malha discreto */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.04;
+    background-image: 
+      linear-gradient(135deg, #128a98 25%, transparent 25%), 
+      linear-gradient(225deg, #128a98 25%, transparent 25%), 
+      linear-gradient(45deg, #128a98 25%, transparent 25%), 
+      linear-gradient(315deg, #128a98 25%, transparent 25%);
+    background-position: 24px 0, 24px 0, 0 0, 0 0;
+    background-size: 48px 48px;
+    background-repeat: repeat;
+  }
+
+  .clean-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 32px;
+    width: 100%;
+  }
+
+  .clean-card {
+    background: #ffffff;
+    border: 1px solid rgba(20,40,58,0.06);
+    border-radius: 8px;
+    padding: 40px 32px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .clean-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(20,40,58,0.06);
+  }
+
+  .btn-primary {
+    background: #e8672e;
+    color: #ffffff;
+    padding: 16px 36px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 16px rgba(232, 103, 46, 0.25);
+    transition: all 0.25s ease;
+  }
+  .btn-primary:hover {
+    background: #d4561f;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(232, 103, 46, 0.35);
+  }
+
+  .btn-secondary {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #ffffff;
+    padding: 16px 32px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    transition: all 0.25s ease;
+  }
+  .btn-secondary:hover {
+    background: rgba(255,255,255,0.22);
+    color: #ffffff;
+  }
+
+  /* Header & Navigation Styles */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 48px;
+    background: rgba(248,246,240,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(20,40,58,0.06);
+    transition: padding 0.3s ease, height 0.3s ease;
+  }
+  .site-logo-img {
+    height: 100px;
+    margin-top: -12px;
+    margin-bottom: -12px;
+    object-fit: contain;
+    transition: height 0.3s ease;
+  }
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  .mobile-menu-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: #14283a;
+    z-index: 102;
+  }
+  .mobile-nav-overlay {
+    display: none;
+  }
+
+  /* Responsive Section Padding & Containers */
+  .section-responsive {
+    padding: 120px 0;
+  }
+  .hero-section {
+    position: relative;
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+    overflow: hidden;
+  }
+  .hero-title {
+    font-family: 'Newsreader', serif;
+    font-weight: 500;
+    font-size: 58px;
+    line-height: 1.08;
+    margin: 0 0 24px;
+    color: #ffffff;
+  }
+  .hero-subtitle {
+    font-size: 18px;
+    line-height: 1.65;
+    color: #d7dde0;
+    max-width: 540px;
+    margin: 0 0 36px;
+    font-weight: 300;
+  }
+  .hero-cta-group {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .metrics-section {
+    background: #ffffff;
+    border-bottom: 1px solid rgba(20,40,58,0.06);
+    padding: 36px 48px;
+  }
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    text-align: center;
+  }
+  .metric-value {
+    font-family: 'Newsreader', serif;
+    font-size: 32px;
+    font-weight: 500;
+  }
+
+  .section-header-title {
+    font-family: 'Newsreader', serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.15;
+    margin: 16px 0 16px;
+    color: #14283a;
+  }
+
+  .solucoes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .risco-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .simulador-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: ew-resize;
+    user-select: none;
+    box-shadow: 0 12px 32px rgba(20,40,58,0.08);
+  }
+  .simulador-badge-left {
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    background: rgba(20,40,58,0.85);
+    color: #fff;
+    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+  .simulador-badge-right {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    background: rgba(18,138,152,0.9);
+    color: #fff;
+    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+  .simulador-handle-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  }
+
+  .table-card-wrapper {
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid rgba(20,40,58,0.06);
+    padding: 40px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .cta-final-title {
+    font-family: 'Newsreader', serif;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 1.15;
+    margin: 0 0 20px;
+  }
+
+  .footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #74818a;
+  }
+
+  /* MEDIA QUERIES FOR TABLET & MOBILE */
+  @media (max-width: 991px) {
+    .site-header {
+      height: 70px;
+      padding: 0 20px;
+    }
+    .site-logo-img {
+      height: 64px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .desktop-nav {
+      display: none;
+    }
+    .mobile-menu-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .mobile-nav-overlay {
+      display: block;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(248, 246, 240, 0.98);
+      backdrop-filter: blur(16px);
+      z-index: 101;
+      padding: 32px 24px;
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+      overflow-y: auto;
+    }
+    .mobile-nav-overlay.is-active {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .mobile-nav-links a {
+      font-size: 17px;
+      font-weight: 500;
+      color: #14283a;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(20,40,58,0.06);
+      display: block;
+    }
+    .mobile-nav-cta {
+      margin-top: 24px;
+      text-align: center;
+      background: #e8672e;
+      color: #ffffff !important;
+      padding: 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 15px;
+      box-shadow: 0 4px 16px rgba(232, 103, 46, 0.25);
+    }
+
+    .section-responsive {
+      padding: 80px 0;
+    }
+
+    .metrics-section {
+      padding: 32px 24px;
+    }
+    .metrics-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px 20px;
+    }
+
+    .diferenciais-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .risco-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .depoimentos-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .clean-container {
+      padding: 0 20px;
+    }
+
+    .clean-card {
+      padding: 28px 20px;
+    }
+
+    .section-responsive {
+      padding: 60px 0;
+    }
+
+    .hero-section {
+      min-height: auto;
+      padding: 60px 0 70px;
+    }
+    .hero-title {
+      font-size: 34px;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .hero-subtitle {
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+    .hero-cta-group {
+      flex-direction: column;
+      width: 100%;
+      gap: 12px;
+    }
+    .hero-cta-group .btn-primary,
+    .hero-cta-group .btn-secondary {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .section-header-title {
+      font-size: 28px;
+      line-height: 1.2;
+      margin: 12px 0 12px;
+    }
+
+    .solucoes-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .solucoes-header {
+      margin-bottom: 36px !important;
+    }
+
+    .simulador-container {
+      aspect-ratio: 4/3;
+    }
+    .simulador-badge-left {
+      top: 12px;
+      left: 12px;
+      font-size: 10px;
+      padding: 4px 8px;
+    }
+    .simulador-badge-right {
+      top: 12px;
+      right: 12px;
+      font-size: 10px;
+      padding: 4px 8px;
+    }
+    .simulador-handle-circle {
+      width: 38px;
+      height: 38px;
+      font-size: 15px;
+    }
+
+    .table-card-wrapper {
+      padding: 20px 14px;
+    }
+    .table-card-wrapper table {
+      min-width: 500px;
+      font-size: 13px !important;
+    }
+
+    .faq-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .cta-final-title {
+      font-size: 28px;
+      line-height: 1.2;
+    }
+
+    .footer-container {
+      flex-direction: column;
+      gap: 16px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 540px) {
+    .clean-container {
+      padding: 0 16px;
+    }
+
+    .metrics-section {
+      padding: 24px 16px;
+    }
+    .metrics-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 12px;
+    }
+    .metric-value {
+      font-size: 24px;
+    }
+
+    .diferenciais-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .depoimentos-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .hero-title {
+      font-size: 28px;
+    }
+
+    .btn-primary, .btn-secondary {
+      padding: 14px 24px;
+      font-size: 14px;
+      width: 100%;
+    }
+  }
+</style>
+</helmet>
+
+<div style="font-family: 'Sora', sans-serif; background: #f8f6f0; color: #14283a; overflow: hidden;">
+
+  <!-- NAV CLEAN & ELEGANTE (RESPONSIVA COM MENU MOBILE) -->
+  <header class="site-header">
+    <a href="#" style="display: flex; align-items: center;">
+      <img src="./assets/redsegura-logo.png" alt="RedSegura Valencia" class="site-logo-img" />
+    </a>
+    
+    <!-- DESKTOP NAV -->
+    <nav class="desktop-nav">
+      <a href="#solucoes" style="font-size: 14px; color: #52616b; font-weight: 500;">Soluciones</a>
+      <a href="#diferenciais" style="font-size: 14px; color: #52616b; font-weight: 500;">Diferenciales</a>
+      <a href="#simulador" style="font-size: 14px; color: #52616b; font-weight: 500;">Antes / Después</a>
+      <a href="#comparador" style="font-size: 14px; color: #52616b; font-weight: 500;">Comparativo</a>
+      <a href="#depoimentos" style="font-size: 14px; color: #52616b; font-weight: 500;">Opiniones</a>
+      <a href="#faq" style="font-size: 14px; color: #52616b; font-weight: 500;">Preguntas</a>
+      <a href="{{ waLinkNav }}" target="_blank" style="background: #14283a; color: #fff; padding: 10px 22px; border-radius: 6px; font-size: 13px; font-weight: 600; letter-spacing: 0.02em;">
+        Pedir Orçamento
+      </a>
+    </nav>
+
+    <!-- BUTTON HAMBURGER MOBILE -->
+    <button class="mobile-menu-btn" onclick="{{ toggleMobileMenu }}" aria-label="Abrir menu principal">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- OVERLAY NAV MOBILE -->
+    <div class="mobile-nav-overlay {{ mobileMenuOpen }}">
+      <div class="mobile-nav-links">
+        <a href="#solucoes" onclick="{{ closeMobileMenu }}">Soluciones</a>
+        <a href="#diferenciais" onclick="{{ closeMobileMenu }}">Diferenciales</a>
+        <a href="#simulador" onclick="{{ closeMobileMenu }}">Antes / Después</a>
+        <a href="#comparador" onclick="{{ closeMobileMenu }}">Comparativo</a>
+        <a href="#depoimentos" onclick="{{ closeMobileMenu }}">Opiniones</a>
+        <a href="#faq" onclick="{{ closeMobileMenu }}">Preguntas</a>
+        <a href="{{ waLinkNav }}" target="_blank" class="mobile-nav-cta" onclick="{{ closeMobileMenu }}">
+          Pedir Orçamento no WhatsApp &rarr;
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO MINIMALISTA & IMPACTANTE -->
+  <section class="hero-section">
+    <div style="position: absolute; inset: 0; z-index: 0;">
+      <!-- Foto de Fallback -->
+      <image-slot id="hero-bg" shape="rect" placeholder="Janela com vista ampla para cidade em Valencia com luz suave da tarde" style="width: 100%; height: 100%; object-fit: cover;"></image-slot>
+      
+      <!-- Vídeo HD em Loop -->
+      <video id="hero-bg-video" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" onended="this.play()" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+        <source src="./assets/hero-balcony-video.mp4" type="video/mp4">
+      </video>
+
+      <!-- Overlay Suave -->
+      <div style="position: absolute; inset: 0; background: linear-gradient(105deg, rgba(12,24,36,0.92) 0%, rgba(12,24,36,0.78) 50%, rgba(12,24,36,0.45) 100%);"></div>
+    </div>
+
+    <div class="clean-container" style="position: relative; z-index: 10;">
+      <div style="max-width: 640px;">
+        
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+          <span style="width: 24px; height: 1px; background: #e8672e;"></span>
+          <span style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #5fd6e3; font-weight: 600;">Redes de Protección Certificadas · Valencia</span>
+        </div>
+
+        <h1 class="hero-title">
+          O mundo lá fora, sem risco lá dentro.<br/><em style="font-style: italic; color: #5fd6e3;">Deixe a janela aberta.</em>
+        </h1>
+        
+        <p class="hero-subtitle">
+          Uma malha de alta densidade, quase invisível e de máxima resistência (150 kg/m²), protegendo crianças, pets e a tranquilidade do seu lar em Valencia.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="{{ waLinkHero }}" target="_blank" class="btn-primary">
+            <span>Pedir orçamento no WhatsApp</span>
+            <span style="font-size: 18px;">&rarr;</span>
+          </a>
+          <a href="#simulador" class="btn-secondary">
+            Ver Antes / Depois
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BARRA DE MÉTRICAS CLEAN -->
+  <section class="metrics-section">
+    <div class="clean-container">
+      <div class="metrics-grid">
+        <div>
+          <div class="metric-value" style="color: #14283a;">150 kg/m²</div>
+          <div class="metric-label" style="font-size: 13px; color: #74818a; margin-top: 4px; font-weight: 500;">Resistência Certificada</div>
+        </div>
+        <div>
+          <div class="metric-value" style="color: #128a98;">2 a 3 Años</div>
+          <div class="metric-label" style="font-size: 13px; color: #74818a; margin-top: 4px; font-weight: 500;">Garantia por Escrito</div>
+        </div>
+        <div>
+          <div class="metric-value" style="color: #e8672e;">EN 1263-1</div>
+          <div class="metric-label" style="font-size: 13px; color: #74818a; margin-top: 4px; font-weight: 500;">Norma Europea</div>
+        </div>
+        <div>
+          <div class="metric-value" style="color: #14283a;">&lt; 24h</div>
+          <div class="metric-label" style="font-size: 13px; color: #74818a; margin-top: 4px; font-weight: 500;">Orçamento por Foto</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUÇÕES (4 CARDS LIMPOS) -->
+  <section id="solucoes" class="section-responsive" style="background: #f8f6f0;">
+    <div class="clean-container">
+      
+      <div class="solucoes-header" style="max-width: 580px; margin-bottom: 64px;">
+        <span style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #e8672e; font-weight: 600;">Soluções Integrais</span>
+        <h2 class="section-header-title">
+          Uma malha, várias necessidades de segurança.
+        </h2>
+        <p class="section-header-desc" style="font-size: 16px; color: #52616b; margin: 0; line-height: 1.6;">
+          Adaptamos nossas redes de polietileno a qualquer tipo de sacada, janela ou terraço com mínimo impacto visual na fachada.
+        </p>
+      </div>
+
+      <div class="solucoes-grid">
+        
+        <!-- Card 1: Gatos -->
+        <div class="clean-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-family: 'Newsreader', serif; font-size: 14px; color: #128a98; margin-bottom: 20px; font-weight: 600;">01 / MASCOTAS</div>
+            <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 24px; color: #14283a; margin: 0 0 12px;">Proteção para Gatos</h3>
+            <p style="font-size: 15px; line-height: 1.65; color: #52616b; margin: 0 0 24px;">
+              Evite a "síndrome do gato paraquedista" com nossa malha de alta tenacidad anti-mordida e resistente aos raios solares.
+            </p>
+          </div>
+          <a href="{{ waLinkNav }}" target="_blank" style="font-size: 14px; font-weight: 600; color: #128a98; display: inline-flex; align-items: center; gap: 6px;">
+            Consultar para meu balcão &rarr;
+          </a>
+        </div>
+
+        <!-- Card 2: Crianças -->
+        <div class="clean-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-family: 'Newsreader', serif; font-size: 14px; color: #e8672e; margin-bottom: 20px; font-weight: 600;">02 / FAMÍLIA</div>
+            <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 24px; color: #14283a; margin: 0 0 12px;">Segurança Infantil</h3>
+            <p style="font-size: 15px; line-height: 1.65; color: #52616b; margin: 0 0 24px;">
+              Proteção certificada 150 kg/m² para janelas, varandas e escadas. Substitui grades sem criar sensação de aprisionamento.
+            </p>
+          </div>
+          <a href="{{ waLinkNav }}" target="_blank" style="font-size: 14px; font-weight: 600; color: #128a98; display: inline-flex; align-items: center; gap: 6px;">
+            Ver opções de segurança &rarr;
+          </a>
+        </div>
+
+        <!-- Card 3: Aves -->
+        <div class="clean-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-family: 'Newsreader', serif; font-size: 14px; color: #14283a; margin-bottom: 20px; font-weight: 600;">03 / EDIFÍCIOS</div>
+            <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 24px; color: #14283a; margin: 0 0 12px;">Controle de Aves (Anti-Pombos)</h3>
+            <p style="font-size: 15px; line-height: 1.65; color: #52616b; margin: 0 0 24px;">
+              Solução definitiva e higiênica contra a entrada e sujeira de pombos em varandas, terraços e pátios internos.
+            </p>
+          </div>
+          <a href="{{ waLinkNav }}" target="_blank" style="font-size: 14px; font-weight: 600; color: #128a98; display: inline-flex; align-items: center; gap: 6px;">
+            Proteger meu terraço &rarr;
+          </a>
+        </div>
+
+        <!-- Card 4: Terraços e Sacadas -->
+        <div class="clean-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-family: 'Newsreader', serif; font-size: 14px; color: #128a98; margin-bottom: 20px; font-weight: 600;">04 / ESPAÇOS EXTERNOS</div>
+            <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 24px; color: #14283a; margin: 0 0 12px;">Terraços & Grandes Vãos</h3>
+            <p style="font-size: 15px; line-height: 1.65; color: #52616b; margin: 0 0 24px;">
+              Fechamento imperceptível para sacadas amplas. Aproveite o ar puro com total tranquilidade para toda a família.
+            </p>
+          </div>
+          <a href="{{ waLinkNav }}" target="_blank" style="font-size: 14px; font-weight: 600; color: #128a98; display: inline-flex; align-items: center; gap: 6px;">
+            Pedir orçamento sob medida &rarr;
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- POR QUÉ ELEGIRNOS (DIFERENCIAÇÃO TÉCNICA) -->
+  <section id="diferenciais" class="section-responsive" style="background: #ffffff; border-top: 1px solid rgba(20,40,58,0.06); border-bottom: 1px solid rgba(20,40,58,0.06);">
+    <div class="clean-container">
+      
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 56px;">
+        <span style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #128a98; font-weight: 600;">Diferenciación Técnica</span>
+        <h2 class="section-header-title">
+          ¿Por qué confiar en RedSegura?
+        </h2>
+        <p class="section-header-desc" style="font-size: 16px; color: #52616b; margin: 0; line-height: 1.6;">
+          Unimos a máxima segurança técnica à tranquilidade da sua família com instalação própria especializada em Valencia.
+        </p>
+      </div>
+
+      <div class="diferenciais-grid">
+        
+        <div class="clean-card" style="border-left: 3px solid #128a98; padding: 28px 20px;">
+          <div style="font-size: 24px; margin-bottom: 12px;">🛡️</div>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 20px; color: #14283a; margin: 0 0 8px;">Carga 150 kg/m²</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: #52616b; margin: 0;">Soporta holgadamente la presión directa de un adulto apoyado en la red sin ceder.</p>
+        </div>
+
+        <div class="clean-card" style="border-left: 3px solid #e8672e; padding: 28px 20px;">
+          <div style="font-size: 24px; margin-bottom: 12px;">☀️</div>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 20px; color: #14283a; margin: 0 0 8px;">Anti-UV e Ignífugo</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: #52616b; margin: 0;">El polietileno virgen resiste la radiación solar continua de Valencia sin resquebrajarse ni arder.</p>
+        </div>
+
+        <div class="clean-card" style="border-left: 3px solid #25D366; padding: 28px 20px;">
+          <div style="font-size: 24px; margin-bottom: 12px;">👷‍♂️</div>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 20px; color: #14283a; margin: 0 0 8px;">Instaladores Propios</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: #52616b; margin: 0;">No subcontratamos. Personal técnico entrenado exclusivamente en fijación y tensión de redes.</p>
+        </div>
+
+        <div class="clean-card" style="border-left: 3px solid #14283a; padding: 28px 20px;">
+          <div style="font-size: 24px; margin-bottom: 12px;">🧹</div>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 20px; color: #14283a; margin: 0 0 8px;">Instalación Sin Obras</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: #52616b; margin: 0;">Anclajes inoxidables de alta precisión colocados en pocas horas en una única visita.</p>
+        </div>
+
+        <div class="clean-card" style="border-left: 3px solid #128a98; padding: 28px 20px;">
+          <div style="font-size: 24px; margin-bottom: 12px;">🏢</div>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 20px; color: #14283a; margin: 0 0 8px;">Conforme Ley LPH</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: #52616b; margin: 0;">Respetuosa con la estética del edificio y permitida en comunidades de vecinos.</p>
+        </div>
+
+        <div class="clean-card" style="border-left: 3px solid #e8672e; padding: 28px 20px;">
+          <div style="font-size: 24px; margin-bottom: 12px;">⏳</div>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 20px; color: #14283a; margin: 0 0 8px;">Garantía de 2 a 3 Años</h3>
+          <p style="font-size: 14px; line-height: 1.6; color: #52616b; margin: 0;">Cubre cualquier eventualidad en materiales y tensión de la red por escrito.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- O RISCO REAL -->
+  <section id="risco" class="section-responsive" style="background: #eee8dc;">
+    <div class="clean-container risco-grid">
+      <div>
+        <span style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #128a98; font-weight: 600;">Conscientização</span>
+        <h2 class="section-header-title">
+          A "Síndrome do Gato Paraquedista" é mais comum do que parece.
+        </h2>
+        <p style="font-size: 15px; line-height: 1.7; color: #52616b; margin: 0 0 16px;">
+          Gatos calculam mal alturas ao tentar pegar insetos ou pássaros e perdem o equilíbrio. Veterinários de toda a Espanha atendem diariamente quedas de janelas e sacadas — muitas vezes com consequências graves.
+        </p>
+        <p style="font-size: 15px; line-height: 1.7; color: #52616b; margin: 0 0 28px;">
+          Uma cirurgia ortopédica de emergência pode custar entre 800 € e 3.000 €. A rede de proteção é um investimento único para prevenir acidentes para sempre.
+        </p>
+
+        <a href="{{ waLinkHero }}" target="_blank" class="btn-primary">
+          <span>Proteger minha janela agora</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <div style="background: #ffffff; padding: 28px 24px; border-radius: 8px; border: 1px solid rgba(20,40,58,0.06);">
+          <div style="font-family: 'Newsreader', serif; font-size: 36px; color: #e8672e; font-weight: 500;">800 &ndash; 3.000 €</div>
+          <div style="font-size: 13px; color: #74818a; margin-top: 6px;">Custo médio de cirurgia veterinária após queda</div>
+        </div>
+        <div style="background: #ffffff; padding: 28px 24px; border-radius: 8px; border: 1px solid rgba(20,40,58,0.06);">
+          <div style="font-family: 'Newsreader', serif; font-size: 36px; color: #128a98; font-weight: 500;">1 Única Visita</div>
+          <div style="font-size: 13px; color: #74818a; margin-top: 6px;">Instalação rápida, limpa e sem reformas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMULADOR ANTES / DEPOIS -->
+  <section id="simulador" class="section-responsive" style="background: #f8f6f0;">
+    <div class="clean-container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 48px;">
+        <span style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #e8672e; font-weight: 600;">Visualização Real</span>
+        <h2 class="section-header-title">
+          Arraste e veja a diferença — sem perder a vista.
+        </h2>
+        <p class="section-header-desc" style="font-size: 15px; color: #52616b; margin: 0;">
+          A malha é sutil o suficiente para se integrar à paisagem urbana sem afetar a luminosidade da sua casa.
+        </p>
+      </div>
+
+      <div class="simulador-container" onmousedown="{{ onDragStart }}" ontouchstart="{{ onDragStart }}">
+        <div style="position: absolute; inset: 0;">
+          <image-slot id="sim-after" shape="rect" src="./assets/balcony_after.jpg" placeholder="Janela com rede instalada, discreta e transparente" style="width: 100%; height: 100%;"></image-slot>
+        </div>
+        <div style="position: absolute; inset: 0; clip-path: polygon(0 0, {{ sliderPos }}% 0, {{ sliderPos }}% 100%, 0 100%);">
+          <image-slot id="sim-before" shape="rect" src="./assets/balcony_before.jpg" placeholder="Mesma janela sem proteção, vista desprotegida" style="width: 100%; height: 100%;"></image-slot>
+        </div>
+        <div class="simulador-badge-left">SEM PROTEÇÃO</div>
+        <div class="simulador-badge-right">COM REDESEGURA</div>
+        <div style="position: absolute; top: 0; bottom: 0; left: {{ sliderPos }}%; width: 2px; background: #fff; transform: translateX(-1px);"></div>
+        <div class="simulador-handle-circle" style="left: {{ sliderPos }}%;">
+          <span style="color: #14283a;">&#8596;</span>
+        </div>
+      </div>
+      <input type="range" min="0" max="100" value="{{ sliderPos }}" oninput="{{ onSliderInput }}" style="width: 100%; margin-top: 20px; accent-color: #e8672e;" />
+    </div>
+  </section>
+
+  <!-- COMPARATIVO TÉCNICO CLEAN -->
+  <section id="comparador" class="section-responsive" style="background: #eee8dc;">
+    <div class="clean-container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 48px;">
+        <span style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #128a98; font-weight: 600;">Comparativo de Qualidade</span>
+        <h2 class="section-header-title">
+          Nem toda rede oferece a mesma segurança.
+        </h2>
+      </div>
+
+      <div class="table-card-wrapper">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 15px;">
+          <thead>
+            <tr style="border-bottom: 2px solid #f8f6f0;">
+              <th style="padding: 16px 12px; color: #74818a; font-weight: 600; width: 40%;">Especificação</th>
+              <th style="padding: 16px 12px; color: #74818a; font-weight: 600; text-align: center; width: 30%;">Nylon Comum</th>
+              <th style="padding: 16px 12px; color: #128a98; font-weight: 700; text-align: center; width: 30%;">RedSegura Valencia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid #f8f6f0;">
+              <td style="padding: 16px 12px; color: #14283a;">Resistência à Carga</td>
+              <td style="padding: 16px 12px; text-align: center; color: #74818a;">~20 kg/m²</td>
+              <td style="padding: 16px 12px; text-align: center; color: #128a98; font-weight: 600;">150 kg/m² Certificados</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #f8f6f0;">
+              <td style="padding: 16px 12px; color: #14283a;">Material do Fio</td>
+              <td style="padding: 16px 12px; text-align: center; color: #74818a;">Nylon Reciclado</td>
+              <td style="padding: 16px 12px; text-align: center; color: #128a98; font-weight: 600;">Polietileno Virgem Anti-UV</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #f8f6f0;">
+              <td style="padding: 16px 12px; color: #14283a;">Norma de Segurança</td>
+              <td style="padding: 16px 12px; text-align: center; color: #74818a;">Sem Certificação</td>
+              <td style="padding: 16px 12px; text-align: center; color: #128a98; font-weight: 600;">Norma Europeia EN 1263-1</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #f8f6f0;">
+              <td style="padding: 16px 12px; color: #14283a;">Durabilidade ao Sol</td>
+              <td style="padding: 16px 12px; text-align: center; color: #74818a;">Resseca em 1-2 anos</td>
+              <td style="padding: 16px 12px; text-align: center; color: #128a98; font-weight: 600;">Longa Vida Útil Sem Ressecar</td>
+            </tr>
+            <tr>
+              <td style="padding: 16px 12px; color: #14283a;">Garantia por Escrito</td>
+              <td style="padding: 16px 12px; text-align: center; color: #74818a;">Sem Garantia Formal</td>
+              <td style="padding: 16px 12px; text-align: center; color: #128a98; font-weight: 600;">2 a 3 Anos de Garantia</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROVAS SOCIAIS / AVALIAÇÕES DE CLIENTES -->
+  <section id="depoimentos" class="section-responsive" style="background: #ffffff;">
+    <div class="clean-container">
+      
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 48px;">
+        <span style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #25D366; font-weight: 600;">Experiencias Reales</span>
+        <h2 class="section-header-title">
+          Lo que dicen las familias protegidas.
+        </h2>
+        <div style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: #f59e0b; font-weight: 600;">
+          ★★★★★ <span>4.9 / 5 en Google Reviews (128+ opiniones)</span>
+        </div>
+      </div>
+
+      <div class="depoimentos-grid">
+        
+        <div class="clean-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="color: #f59e0b; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+            <p style="font-size: 14px; line-height: 1.65; color: #52616b; font-style: italic; margin: 0 0 20px;">
+              "Buscaba una solución para mis dos gatos en el balcón. Mandé una foto por WhatsApp y en menos de 24 horas ya tenía presupuesto. La instalación fue rápida y limpia. Mis gatos disfrutan del sol y yo vivo tranquila."
+            </p>
+          </div>
+          <div style="border-top: 1px solid rgba(20,40,58,0.06); padding-top: 16px; margin-top: 16px;">
+            <div style="font-weight: 600; font-size: 14px; color: #14283a;">Ana García</div>
+            <div style="font-size: 12px; color: #74818a;">Protección para Gatos · Valencia Centro</div>
+          </div>
+        </div>
+
+        <div class="clean-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="color: #f59e0b; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+            <p style="font-size: 14px; line-height: 1.65; color: #52616b; font-style: italic; margin: 0 0 20px;">
+              "Instalamos las redes de seguridad infantil en todas las ventanas del piso. Tenemos una niña de 2 años super inquieta. El equipo fue impecable, explicaron la resistencia de 150kg/m² y terminaron rapidísimo."
+            </p>
+          </div>
+          <div style="border-top: 1px solid rgba(20,40,58,0.06); padding-top: 16px; margin-top: 16px;">
+            <div style="font-weight: 600; font-size: 14px; color: #14283a;">Lucía & Carlos</div>
+            <div style="font-size: 12px; color: #74818a;">Seguridad Infantil · Ruzafa, Valencia</div>
+          </div>
+        </div>
+
+        <div class="clean-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="color: #f59e0b; font-size: 15px; margin-bottom: 12px;">★★★★★</div>
+            <p style="font-size: 14px; line-height: 1.65; color: #52616b; font-style: italic; margin: 0 0 20px;">
+              "Teníamos problemas con palomas en la terraza. En una mañana nos colocaron la red imperceptible y las palomas no han vuelto. Excelente servicio con garantía de 2 años por escrito."
+            </p>
+          </div>
+          <div style="border-top: 1px solid rgba(20,40,58,0.06); padding-top: 16px; margin-top: 16px;">
+            <div style="font-weight: 600; font-size: 14px; color: #14283a;">Roberto F.</div>
+            <div style="font-size: 12px; color: #74818a;">Control de Aves · Torrent, Valencia</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DÚVIDAS FREQUENTES (FAQ) -->
+  <section id="faq" class="section-responsive" style="background: #f8f6f0;">
+    <div class="clean-container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 48px;">
+        <span style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #e8672e; font-weight: 600;">Esclarecimentos</span>
+        <h2 class="section-header-title">
+          Perguntas Frequentes
+        </h2>
+      </div>
+
+      <div class="faq-grid">
+        
+        <div class="clean-card">
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 20px; color: #14283a; margin: 0 0 10px;">Moro de aluguel, posso instalar?</h3>
+          <p style="font-size: 14px; line-height: 1.65; color: #52616b; margin: 0;">
+            Sim. A instalação é 100% reversível e não causa danos à estrutura do imóvel. Ao sair, a malha pode ser desinstalada facilmente.
+          </p>
+        </div>
+
+        <div class="clean-card">
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 20px; color: #14283a; margin: 0 0 10px;">É permitido pelas regras do condomínio?</h3>
+          <p style="font-size: 14px; line-height: 1.65; color: #52616b; margin: 0;">
+            Sim. A rede transparente respeita a Ley de Propiedad Horizontal (LPH) na Espanha por não alterar a cor ou arquitetura da fachada.
+          </p>
+        </div>
+
+        <div class="clean-card">
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 20px; color: #14283a; margin: 0 0 10px;">A rede tira a luz ou atrapalha a vista?</h3>
+          <p style="font-size: 14px; line-height: 1.65; color: #52616b; margin: 0;">
+            Não. O fio de polietileno de alta densidade é fino e imperceptível à distância, mantendo a luz natural e a paisagem intactas.
+          </p>
+        </div>
+
+        <div class="clean-card">
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 20px; color: #14283a; margin: 0 0 10px;">Como pedir orçamento rápido pelo WhatsApp?</h3>
+          <p style="font-size: 14px; line-height: 1.65; color: #52616b; margin: 0;">
+            Basta tirar uma foto da sua sacada ou janela e nos enviar pelo WhatsApp. Em poucas horas enviamos a cotação exata sem compromisso.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION FINAL ELEGANTE -->
+  <section class="section-responsive" style="background: #14283a; color: #ffffff; text-align: center;">
+    <div class="clean-container" style="max-width: 640px;">
+      <h2 class="cta-final-title">
+        Liberdade para abrir a janela.<br/><em style="color: #5fd6e3; font-style: italic;">Sem medo.</em>
+      </h2>
+      <p style="font-size: 16px; color: #cdd6db; line-height: 1.65; margin: 0 0 32px; font-weight: 300;">
+        Instalação rápida em uma única visita. Resistencia certificada de 150 kg/m² com 2 a 3 anos de garantia por escrito.
+      </p>
+      
+      <a href="{{ waLinkFooter }}" target="_blank" class="btn-primary" style="font-size: 15px; padding: 18px 36px;">
+        Solicitar orçamento sem compromisso &rarr;
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER MINIMALISTA -->
+  <footer style="padding: 40px 0; background: #f8f6f0; border-top: 1px solid rgba(20,40,58,0.08);">
+    <div class="clean-container footer-container">
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <img src="./assets/redsegura-logo.png" alt="RedSegura Valencia" style="height: 36px; object-fit: contain;" />
+        <span>© 2026 RedSegura Valencia</span>
+      </div>
+      <div>
+        <span>Móvil / WhatsApp: <a href="tel:+34627322086" style="color: #128a98; font-weight: 600;">+34 627 322 086</a></span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1440, &quot;height&quot;: 900}}">
+class Component extends DCLogic {
+  state = {
+    sliderPos: 50,
+    mobileMenuOpen: false
+  };
+
+  onSliderInput = (e) => {
+    this.setState({ sliderPos: Number(e.target.value) });
+  };
+
+  toggleMobileMenu = () => {
+    this.setState({ mobileMenuOpen: !this.state.mobileMenuOpen });
+  };
+
+  closeMobileMenu = () => {
+    this.setState({ mobileMenuOpen: false });
+  };
+
+  onDragStart = (e) => {
+    const track = e.currentTarget;
+    const update = (clientX) => {
+      const rect = track.getBoundingClientRect();
+      const pct = Math.min(100, Math.max(0, ((clientX - rect.left) / rect.width) * 100));
+      this.setState({ sliderPos: Math.round(pct) });
+    };
+    const getX = (ev) => ev.touches ? ev.touches[0].clientX : ev.clientX;
+    update(getX(e));
+    const move = (ev) => update(getX(ev));
+    const up = () => {
+      window.removeEventListener('mousemove', move);
+      window.removeEventListener('mouseup', up);
+      window.removeEventListener('touchmove', move);
+      window.removeEventListener('touchend', up);
+    };
+    window.addEventListener('mousemove', move);
+    window.addEventListener('mouseup', up);
+    window.addEventListener('touchmove', move);
+    window.addEventListener('touchend', up);
+  };
+
+  renderVals() {
+    const waNumber = '34627322086';
+    const msg = encodeURIComponent('Olá! Quero um orçamento rápido para redes de proteção em Valencia. Mando foto da minha sacada/janela.');
+    const waLink = `https://wa.me/${waNumber}?text=${msg}`;
+    return {
+      sliderPos: this.state.sliderPos,
+      mobileMenuOpen: this.state.mobileMenuOpen ? 'is-active' : '',
+      onSliderInput: this.onSliderInput,
+      onDragStart: this.onDragStart,
+      toggleMobileMenu: this.toggleMobileMenu,
+      closeMobileMenu: this.closeMobileMenu,
+      waLinkNav: waLink,
+      waLinkHero: waLink,
+      waLinkFooter: waLink,
+    };
+  }
+}
+</script>
+<script src="./safety-animations.js"></script>
+</body>
+</html>

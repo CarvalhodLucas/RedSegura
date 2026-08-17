@@ -12,10 +12,24 @@
 <meta name="description" content="Instalación profesional de redes de protección para balcones, ventanas, terrazas, gatos y niños en Valencia. Resistencia certificada 150 kg/m², 2 años de garantía y presupuesto gratis en 24h por WhatsApp.">
 <meta name="keywords" content="redes de protección valencia, mallas de seguridad valencia, redes para balcones valencia, redes para gatos valencia, seguridad infantil ventanas">
 
-<!-- Open Graph / Social Media -->
-<meta property="og:title" content="Redes de Protección en Valencia | RedSegura">
-<meta property="og:description" content="Protección certificada para niños y gatos en balcones y ventanas. Resistencia 150 kg/m², garantía de 2-3 años y presupuesto sin compromiso en 24h.">
+<!-- Open Graph / WhatsApp / Social Media -->
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://redsegura.es/">
+<meta property="og:title" content="Redes de Protección en Valencia | RedSegura">
+<meta property="og:description" content="Protección certificada 150 kg/m² para niños y mascotas en balcones y ventanas. Garantía 2-3 años y presupuesto gratis en 24h por WhatsApp.">
+<meta property="og:image" content="https://redsegura.es/assets/og-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="RedSegura Valencia — Redes de Protección para balcones, niños y mascotas">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="RedSegura Valencia">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Redes de Protección en Valencia | RedSegura">
+<meta name="twitter:description" content="Protección certificada 150 kg/m² para niños y mascotas en balcones y ventanas. Garantía 2-3 años y presupuesto gratis en 24h.">
+<meta name="twitter:image" content="https://redsegura.es/assets/og-share.jpg">
 
 <script src="./support.js"></script>
 </head>
@@ -569,7 +583,7 @@
 </style>
 </helmet>
 
-<div style="font-family: 'Sora', sans-serif; background: #f8f6f0; color: #14283a; overflow: hidden;">
+<div style="font-family: 'Sora', sans-serif; background: #f8f6f0; color: #14283a;">
 
   <!-- NAV CLEAN & ELEGANTE (RESPONSIVA COM MENU MOBILE) -->
   <header class="site-header">
@@ -586,38 +600,40 @@
       <a href="#depoimentos" style="font-size: 14px; color: #52616b; font-weight: 500;">Opiniones</a>
       <a href="#faq" style="font-size: 14px; color: #52616b; font-weight: 500;">Preguntas</a>
       <a href="{{ waLinkNav }}" target="_blank" style="background: #14283a; color: #fff; padding: 10px 22px; border-radius: 6px; font-size: 13px; font-weight: 600; letter-spacing: 0.02em;">
-        Pedir Orçamento
+        Pedir Presupuesto
       </a>
     </nav>
 
     <!-- BUTTON HAMBURGER MOBILE -->
-    <button class="mobile-menu-btn" onclick="{{ toggleMobileMenu }}" aria-label="Abrir menu principal">
+    <button class="mobile-menu-btn" onclick="{{ toggleMobileMenu }}" aria-label="Abrir menú principal">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
 
-    <!-- OVERLAY NAV MOBILE -->
-    <div class="mobile-nav-overlay {{ mobileMenuOpen }}">
-      <div class="mobile-nav-links">
-        <a href="#solucoes" onclick="{{ closeMobileMenu }}">Soluciones</a>
-        <a href="#diferenciais" onclick="{{ closeMobileMenu }}">Diferenciales</a>
-        <a href="#simulador" onclick="{{ closeMobileMenu }}">Antes / Después</a>
-        <a href="#comparador" onclick="{{ closeMobileMenu }}">Comparativo</a>
-        <a href="#depoimentos" onclick="{{ closeMobileMenu }}">Opiniones</a>
-        <a href="#faq" onclick="{{ closeMobileMenu }}">Preguntas</a>
-        <a href="{{ waLinkNav }}" target="_blank" class="mobile-nav-cta" onclick="{{ closeMobileMenu }}">
-          Pedir Orçamento no WhatsApp &rarr;
-        </a>
-      </div>
-    </div>
+
   </header>
+
+  <!-- OVERLAY NAV MOBILE (fora do header para evitar clipping) -->
+  <div class="mobile-nav-overlay {{ mobileMenuOpen }}">
+    <div class="mobile-nav-links">
+      <a href="#solucoes" onclick="{{ closeMobileMenu }}">Soluciones</a>
+      <a href="#diferenciais" onclick="{{ closeMobileMenu }}">Diferenciales</a>
+      <a href="#simulador" onclick="{{ closeMobileMenu }}">Antes / Después</a>
+      <a href="#comparador" onclick="{{ closeMobileMenu }}">Comparativo</a>
+      <a href="#depoimentos" onclick="{{ closeMobileMenu }}">Opiniones</a>
+      <a href="#faq" onclick="{{ closeMobileMenu }}">Preguntas</a>
+      <a href="{{ waLinkNav }}" target="_blank" class="mobile-nav-cta" onclick="{{ closeMobileMenu }}">
+        Pedir Presupuesto por WhatsApp &rarr;
+      </a>
+    </div>
+  </div>
 
   <!-- HERO MINIMALISTA & IMPACTANTE -->
   <section class="hero-section">
     <div style="position: absolute; inset: 0; z-index: 0;">
       <!-- Foto de Fallback -->
-      <image-slot id="hero-bg" shape="rect" placeholder="Janela com vista ampla para cidade em Valencia com luz suave da tarde" style="width: 100%; height: 100%; object-fit: cover;"></image-slot>
+      <image-slot id="hero-bg" shape="rect" placeholder="Ventana con amplia vista a la ciudad de Valencia con suave luz de tarde" style="width: 100%; height: 100%; object-fit: cover;"></image-slot>
       
       <!-- Vídeo HD em Loop -->
       <video id="hero-bg-video" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" onended="this.play()" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
@@ -637,20 +653,20 @@
         </div>
 
         <h1 class="hero-title">
-          O mundo lá fora, sem risco lá dentro.<br/><em style="font-style: italic; color: #5fd6e3;">Deixe a janela aberta.</em>
+          El mundo ahí fuera, sin riesgo aquí dentro.<br/><em style="font-style: italic; color: #5fd6e3;">Deja la ventana abierta.</em>
         </h1>
         
         <p class="hero-subtitle">
-          Uma malha de alta densidade, quase invisível e de máxima resistência (150 kg/m²), protegendo crianças, pets e a tranquilidade do seu lar em Valencia.
+          Una malla de alta densidad, casi invisible y de máxima resistencia (150 kg/m²), protegiendo a niños, mascotas y la tranquilidad de tu hogar en Valencia.
         </p>
 
         <div class="hero-cta-group">
           <a href="{{ waLinkHero }}" target="_blank" class="btn-primary">
-            <span>Pedir orçamento no WhatsApp</span>
+            <span>Pedir presupuesto por WhatsApp</span>
             <span style="font-size: 18px;">&rarr;</span>
           </a>
           <a href="#simulador" class="btn-secondary">
-            Ver Antes / Depois
+            Ver Antes / Después
           </a>
         </div>
 
@@ -664,11 +680,11 @@
       <div class="metrics-grid">
         <div>
           <div class="metric-value" style="color: #14283a;">150 kg/m²</div>
-          <div class="metric-label" style="font-size: 13px; color: #74818a; margin-top: 4px; font-weight: 500;">Resistência Certificada</div>
+          <div class="metric-label" style="font-size: 13px; color: #74818a; margin-top: 4px; font-weight: 500;">Resistencia Certificada</div>
         </div>
         <div>
           <div class="metric-value" style="color: #128a98;">2 a 3 Años</div>
-          <div class="metric-label" style="font-size: 13px; color: #74818a; margin-top: 4px; font-weight: 500;">Garantia por Escrito</div>
+          <div class="metric-label" style="font-size: 13px; color: #74818a; margin-top: 4px; font-weight: 500;">Garantía por Escrito</div>
         </div>
         <div>
           <div class="metric-value" style="color: #e8672e;">EN 1263-1</div>
@@ -676,7 +692,7 @@
         </div>
         <div>
           <div class="metric-value" style="color: #14283a;">&lt; 24h</div>
-          <div class="metric-label" style="font-size: 13px; color: #74818a; margin-top: 4px; font-weight: 500;">Orçamento por Foto</div>
+          <div class="metric-label" style="font-size: 13px; color: #74818a; margin-top: 4px; font-weight: 500;">Presupuesto por Foto</div>
         </div>
       </div>
     </div>
@@ -687,70 +703,70 @@
     <div class="clean-container">
       
       <div class="solucoes-header" style="max-width: 580px; margin-bottom: 64px;">
-        <span style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #e8672e; font-weight: 600;">Soluções Integrais</span>
+        <span style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #e8672e; font-weight: 600;">Soluciones Integrales</span>
         <h2 class="section-header-title">
-          Uma malha, várias necessidades de segurança.
+          Una malla, múltiples necesidades de seguridad.
         </h2>
         <p class="section-header-desc" style="font-size: 16px; color: #52616b; margin: 0; line-height: 1.6;">
-          Adaptamos nossas redes de polietileno a qualquer tipo de sacada, janela ou terraço com mínimo impacto visual na fachada.
+          Adaptamos nuestras redes de polietileno a cualquier tipo de balcón, ventana o terraza con mínimo impacto visual en la fachada.
         </p>
       </div>
 
       <div class="solucoes-grid">
         
-        <!-- Card 1: Gatos -->
+        <!-- Card 1: Pets -->
         <div class="clean-card" style="display: flex; flex-direction: column; justify-content: space-between;">
           <div>
             <div style="font-family: 'Newsreader', serif; font-size: 14px; color: #128a98; margin-bottom: 20px; font-weight: 600;">01 / MASCOTAS</div>
-            <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 24px; color: #14283a; margin: 0 0 12px;">Proteção para Gatos</h3>
+            <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 24px; color: #14283a; margin: 0 0 12px;">Protección para Pets</h3>
             <p style="font-size: 15px; line-height: 1.65; color: #52616b; margin: 0 0 24px;">
-              Evite a "síndrome do gato paraquedista" com nossa malha de alta tenacidad anti-mordida e resistente aos raios solares.
+              Evita el "síndrome del pet paracaidista" con nuestra malla de alta tenacidad anti-mordedura y resistente a los rayos solares.
             </p>
           </div>
           <a href="{{ waLinkNav }}" target="_blank" style="font-size: 14px; font-weight: 600; color: #128a98; display: inline-flex; align-items: center; gap: 6px;">
-            Consultar para meu balcão &rarr;
+            Consultar para mi balcón &rarr;
           </a>
         </div>
 
         <!-- Card 2: Crianças -->
         <div class="clean-card" style="display: flex; flex-direction: column; justify-content: space-between;">
           <div>
-            <div style="font-family: 'Newsreader', serif; font-size: 14px; color: #e8672e; margin-bottom: 20px; font-weight: 600;">02 / FAMÍLIA</div>
-            <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 24px; color: #14283a; margin: 0 0 12px;">Segurança Infantil</h3>
+            <div style="font-family: 'Newsreader', serif; font-size: 14px; color: #e8672e; margin-bottom: 20px; font-weight: 600;">02 / FAMILIA</div>
+            <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 24px; color: #14283a; margin: 0 0 12px;">Seguridad Infantil</h3>
             <p style="font-size: 15px; line-height: 1.65; color: #52616b; margin: 0 0 24px;">
-              Proteção certificada 150 kg/m² para janelas, varandas e escadas. Substitui grades sem criar sensação de aprisionamento.
+              Protección certificada 150 kg/m² para ventanas, balcones y escaleras. Reemplaza las rejas sin crear sensación de encierro.
             </p>
           </div>
           <a href="{{ waLinkNav }}" target="_blank" style="font-size: 14px; font-weight: 600; color: #128a98; display: inline-flex; align-items: center; gap: 6px;">
-            Ver opções de segurança &rarr;
+            Ver opciones de seguridad &rarr;
           </a>
         </div>
 
         <!-- Card 3: Aves -->
         <div class="clean-card" style="display: flex; flex-direction: column; justify-content: space-between;">
           <div>
-            <div style="font-family: 'Newsreader', serif; font-size: 14px; color: #14283a; margin-bottom: 20px; font-weight: 600;">03 / EDIFÍCIOS</div>
-            <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 24px; color: #14283a; margin: 0 0 12px;">Controle de Aves (Anti-Pombos)</h3>
+            <div style="font-family: 'Newsreader', serif; font-size: 14px; color: #14283a; margin-bottom: 20px; font-weight: 600;">03 / EDIFICIOS</div>
+            <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 24px; color: #14283a; margin: 0 0 12px;">Control de Aves (Anti-Palomas)</h3>
             <p style="font-size: 15px; line-height: 1.65; color: #52616b; margin: 0 0 24px;">
-              Solução definitiva e higiênica contra a entrada e sujeira de pombos em varandas, terraços e pátios internos.
+              Solución definitiva e higiénica contra la entrada y suciedad de palomas en balcones, terrazas y patios interiores.
             </p>
           </div>
           <a href="{{ waLinkNav }}" target="_blank" style="font-size: 14px; font-weight: 600; color: #128a98; display: inline-flex; align-items: center; gap: 6px;">
-            Proteger meu terraço &rarr;
+            Proteger mi terraza &rarr;
           </a>
         </div>
 
         <!-- Card 4: Terraços e Sacadas -->
         <div class="clean-card" style="display: flex; flex-direction: column; justify-content: space-between;">
           <div>
-            <div style="font-family: 'Newsreader', serif; font-size: 14px; color: #128a98; margin-bottom: 20px; font-weight: 600;">04 / ESPAÇOS EXTERNOS</div>
-            <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 24px; color: #14283a; margin: 0 0 12px;">Terraços & Grandes Vãos</h3>
+            <div style="font-family: 'Newsreader', serif; font-size: 14px; color: #128a98; margin-bottom: 20px; font-weight: 600;">04 / ESPACIOS EXTERIORES</div>
+            <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 24px; color: #14283a; margin: 0 0 12px;">Terrazas &amp; Grandes Vanos</h3>
             <p style="font-size: 15px; line-height: 1.65; color: #52616b; margin: 0 0 24px;">
-              Fechamento imperceptível para sacadas amplas. Aproveite o ar puro com total tranquilidade para toda a família.
+              Cierre imperceptible para balcones amplios. Disfruta del aire puro con total tranquilidad para toda la familia.
             </p>
           </div>
           <a href="{{ waLinkNav }}" target="_blank" style="font-size: 14px; font-weight: 600; color: #128a98; display: inline-flex; align-items: center; gap: 6px;">
-            Pedir orçamento sob medida &rarr;
+            Pedir presupuesto a medida &rarr;
           </a>
         </div>
 
@@ -769,7 +785,7 @@
           ¿Por qué confiar en RedSegura?
         </h2>
         <p class="section-header-desc" style="font-size: 16px; color: #52616b; margin: 0; line-height: 1.6;">
-          Unimos a máxima segurança técnica à tranquilidade da sua família com instalação própria especializada em Valencia.
+          Unimos la máxima seguridad técnica con la tranquilidad de tu familia con instalación propia especializada en Valencia.
         </p>
       </div>
 
@@ -783,7 +799,7 @@
 
         <div class="clean-card" style="border-left: 3px solid #e8672e; padding: 28px 20px;">
           <div style="font-size: 24px; margin-bottom: 12px;">☀️</div>
-          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 20px; color: #14283a; margin: 0 0 8px;">Anti-UV e Ignífugo</h3>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 20px; color: #14283a; margin: 0 0 8px;">Anti-UV e Ignífuga</h3>
           <p style="font-size: 14px; line-height: 1.6; color: #52616b; margin: 0;">El polietileno virgen resiste la radiación solar continua de Valencia sin resquebrajarse ni arder.</p>
         </div>
 
@@ -820,19 +836,19 @@
   <section id="risco" class="section-responsive" style="background: #eee8dc;">
     <div class="clean-container risco-grid">
       <div>
-        <span style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #128a98; font-weight: 600;">Conscientização</span>
+        <span style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #128a98; font-weight: 600;">Concienciación</span>
         <h2 class="section-header-title">
-          A "Síndrome do Gato Paraquedista" é mais comum do que parece.
+          El "Síndrome del Gato Paracaidista" es más común de lo que parece.
         </h2>
         <p style="font-size: 15px; line-height: 1.7; color: #52616b; margin: 0 0 16px;">
-          Gatos calculam mal alturas ao tentar pegar insetos ou pássaros e perdem o equilíbrio. Veterinários de toda a Espanha atendem diariamente quedas de janelas e sacadas — muitas vezes com consequências graves.
+          Los gatos calculan mal las alturas al intentar atrapar insectos o pájaros y pierden el equilibrio. Veterinarios de toda España atienden diariamente caídas desde ventanas y balcones — muchas veces con consecuencias graves.
         </p>
         <p style="font-size: 15px; line-height: 1.7; color: #52616b; margin: 0 0 28px;">
-          Uma cirurgia ortopédica de emergência pode custar entre 800 € e 3.000 €. A rede de proteção é um investimento único para prevenir acidentes para sempre.
+          Una cirugía ortopédica de emergencia puede costar entre 800 € y 3.000 €. La red de protección es una inversión única para prevenir accidentes para siempre.
         </p>
 
         <a href="{{ waLinkHero }}" target="_blank" class="btn-primary">
-          <span>Proteger minha janela agora</span>
+          <span>Proteger mi ventana ahora</span>
           <span>&rarr;</span>
         </a>
       </div>
@@ -840,11 +856,11 @@
       <div style="display: flex; flex-direction: column; gap: 20px;">
         <div style="background: #ffffff; padding: 28px 24px; border-radius: 8px; border: 1px solid rgba(20,40,58,0.06);">
           <div style="font-family: 'Newsreader', serif; font-size: 36px; color: #e8672e; font-weight: 500;">800 &ndash; 3.000 €</div>
-          <div style="font-size: 13px; color: #74818a; margin-top: 6px;">Custo médio de cirurgia veterinária após queda</div>
+          <div style="font-size: 13px; color: #74818a; margin-top: 6px;">Coste medio de cirugía veterinaria tras una caída</div>
         </div>
         <div style="background: #ffffff; padding: 28px 24px; border-radius: 8px; border: 1px solid rgba(20,40,58,0.06);">
           <div style="font-family: 'Newsreader', serif; font-size: 36px; color: #128a98; font-weight: 500;">1 Única Visita</div>
-          <div style="font-size: 13px; color: #74818a; margin-top: 6px;">Instalação rápida, limpa e sem reformas</div>
+          <div style="font-size: 13px; color: #74818a; margin-top: 6px;">Instalación rápida, limpia y sin obras</div>
         </div>
       </div>
     </div>
@@ -854,24 +870,24 @@
   <section id="simulador" class="section-responsive" style="background: #f8f6f0;">
     <div class="clean-container">
       <div style="text-align: center; max-width: 600px; margin: 0 auto 48px;">
-        <span style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #e8672e; font-weight: 600;">Visualização Real</span>
+        <span style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #e8672e; font-weight: 600;">Visualización Real</span>
         <h2 class="section-header-title">
-          Arraste e veja a diferença — sem perder a vista.
+          Desliza y comprueba la diferencia — sin perder las vistas.
         </h2>
         <p class="section-header-desc" style="font-size: 15px; color: #52616b; margin: 0;">
-          A malha é sutil o suficiente para se integrar à paisagem urbana sem afetar a luminosidade da sua casa.
+          La malla es lo suficientemente discreta para integrarse en el paisaje urbano sin afectar la luminosidad de tu hogar.
         </p>
       </div>
 
       <div class="simulador-container" onmousedown="{{ onDragStart }}" ontouchstart="{{ onDragStart }}">
         <div style="position: absolute; inset: 0;">
-          <image-slot id="sim-after" shape="rect" src="./assets/balcony_after.jpg" placeholder="Janela com rede instalada, discreta e transparente" style="width: 100%; height: 100%;"></image-slot>
+          <image-slot id="sim-after" shape="rect" src="./assets/balcony_after.jpg" placeholder="Ventana con red instalada, discreta y transparente" style="width: 100%; height: 100%;"></image-slot>
         </div>
         <div style="position: absolute; inset: 0; clip-path: polygon(0 0, {{ sliderPos }}% 0, {{ sliderPos }}% 100%, 0 100%);">
-          <image-slot id="sim-before" shape="rect" src="./assets/balcony_before.jpg" placeholder="Mesma janela sem proteção, vista desprotegida" style="width: 100%; height: 100%;"></image-slot>
+          <image-slot id="sim-before" shape="rect" src="./assets/balcony_before.jpg" placeholder="Misma ventana sin protección, vista desprotegida" style="width: 100%; height: 100%;"></image-slot>
         </div>
-        <div class="simulador-badge-left">SEM PROTEÇÃO</div>
-        <div class="simulador-badge-right">COM REDESEGURA</div>
+        <div class="simulador-badge-left">SIN PROTECCIÓN</div>
+        <div class="simulador-badge-right">CON REDESEGURA</div>
         <div style="position: absolute; top: 0; bottom: 0; left: {{ sliderPos }}%; width: 2px; background: #fff; transform: translateX(-1px);"></div>
         <div class="simulador-handle-circle" style="left: {{ sliderPos }}%;">
           <span style="color: #14283a;">&#8596;</span>
@@ -885,9 +901,9 @@
   <section id="comparador" class="section-responsive" style="background: #eee8dc;">
     <div class="clean-container">
       <div style="text-align: center; max-width: 600px; margin: 0 auto 48px;">
-        <span style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #128a98; font-weight: 600;">Comparativo de Qualidade</span>
+        <span style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #128a98; font-weight: 600;">Comparativa de Calidad</span>
         <h2 class="section-header-title">
-          Nem toda rede oferece a mesma segurança.
+          No todas las redes ofrecen la misma seguridad.
         </h2>
       </div>
 
@@ -895,36 +911,36 @@
         <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 15px;">
           <thead>
             <tr style="border-bottom: 2px solid #f8f6f0;">
-              <th style="padding: 16px 12px; color: #74818a; font-weight: 600; width: 40%;">Especificação</th>
-              <th style="padding: 16px 12px; color: #74818a; font-weight: 600; text-align: center; width: 30%;">Nylon Comum</th>
+              <th style="padding: 16px 12px; color: #74818a; font-weight: 600; width: 40%;">Especificación</th>
+              <th style="padding: 16px 12px; color: #74818a; font-weight: 600; text-align: center; width: 30%;">Nylon Común</th>
               <th style="padding: 16px 12px; color: #128a98; font-weight: 700; text-align: center; width: 30%;">RedSegura Valencia</th>
             </tr>
           </thead>
           <tbody>
             <tr style="border-bottom: 1px solid #f8f6f0;">
-              <td style="padding: 16px 12px; color: #14283a;">Resistência à Carga</td>
+              <td style="padding: 16px 12px; color: #14283a;">Resistencia a la Carga</td>
               <td style="padding: 16px 12px; text-align: center; color: #74818a;">~20 kg/m²</td>
               <td style="padding: 16px 12px; text-align: center; color: #128a98; font-weight: 600;">150 kg/m² Certificados</td>
             </tr>
             <tr style="border-bottom: 1px solid #f8f6f0;">
-              <td style="padding: 16px 12px; color: #14283a;">Material do Fio</td>
+              <td style="padding: 16px 12px; color: #14283a;">Material del Hilo</td>
               <td style="padding: 16px 12px; text-align: center; color: #74818a;">Nylon Reciclado</td>
-              <td style="padding: 16px 12px; text-align: center; color: #128a98; font-weight: 600;">Polietileno Virgem Anti-UV</td>
+              <td style="padding: 16px 12px; text-align: center; color: #128a98; font-weight: 600;">Polietileno Virgen Anti-UV</td>
             </tr>
             <tr style="border-bottom: 1px solid #f8f6f0;">
-              <td style="padding: 16px 12px; color: #14283a;">Norma de Segurança</td>
-              <td style="padding: 16px 12px; text-align: center; color: #74818a;">Sem Certificação</td>
-              <td style="padding: 16px 12px; text-align: center; color: #128a98; font-weight: 600;">Norma Europeia EN 1263-1</td>
+              <td style="padding: 16px 12px; color: #14283a;">Norma de Seguridad</td>
+              <td style="padding: 16px 12px; text-align: center; color: #74818a;">Sin Certificación</td>
+              <td style="padding: 16px 12px; text-align: center; color: #128a98; font-weight: 600;">Norma Europea EN 1263-1</td>
             </tr>
             <tr style="border-bottom: 1px solid #f8f6f0;">
-              <td style="padding: 16px 12px; color: #14283a;">Durabilidade ao Sol</td>
-              <td style="padding: 16px 12px; text-align: center; color: #74818a;">Resseca em 1-2 anos</td>
-              <td style="padding: 16px 12px; text-align: center; color: #128a98; font-weight: 600;">Longa Vida Útil Sem Ressecar</td>
+              <td style="padding: 16px 12px; color: #14283a;">Durabilidad al Sol</td>
+              <td style="padding: 16px 12px; text-align: center; color: #74818a;">Se agrieta en 1-2 años</td>
+              <td style="padding: 16px 12px; text-align: center; color: #128a98; font-weight: 600;">Larga Vida Útil Sin Agrietarse</td>
             </tr>
             <tr>
-              <td style="padding: 16px 12px; color: #14283a;">Garantia por Escrito</td>
-              <td style="padding: 16px 12px; text-align: center; color: #74818a;">Sem Garantia Formal</td>
-              <td style="padding: 16px 12px; text-align: center; color: #128a98; font-weight: 600;">2 a 3 Anos de Garantia</td>
+              <td style="padding: 16px 12px; color: #14283a;">Garantía por Escrito</td>
+              <td style="padding: 16px 12px; text-align: center; color: #74818a;">Sin Garantía Formal</td>
+              <td style="padding: 16px 12px; text-align: center; color: #128a98; font-weight: 600;">2 a 3 Años de Garantía</td>
             </tr>
           </tbody>
         </table>
@@ -996,39 +1012,39 @@
   <section id="faq" class="section-responsive" style="background: #f8f6f0;">
     <div class="clean-container">
       <div style="text-align: center; max-width: 600px; margin: 0 auto 48px;">
-        <span style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #e8672e; font-weight: 600;">Esclarecimentos</span>
+        <span style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #e8672e; font-weight: 600;">Aclaraciones</span>
         <h2 class="section-header-title">
-          Perguntas Frequentes
+          Preguntas Frecuentes
         </h2>
       </div>
 
       <div class="faq-grid">
         
         <div class="clean-card">
-          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 20px; color: #14283a; margin: 0 0 10px;">Moro de aluguel, posso instalar?</h3>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 20px; color: #14283a; margin: 0 0 10px;">Vivo de alquiler, ¿puedo instalarla?</h3>
           <p style="font-size: 14px; line-height: 1.65; color: #52616b; margin: 0;">
-            Sim. A instalação é 100% reversível e não causa danos à estrutura do imóvel. Ao sair, a malha pode ser desinstalada facilmente.
+            Sí. La instalación es 100% reversible y no causa daños en la estructura del inmueble. Al marcharte, la malla puede desmontarse fácilmente.
           </p>
         </div>
 
         <div class="clean-card">
-          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 20px; color: #14283a; margin: 0 0 10px;">É permitido pelas regras do condomínio?</h3>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 20px; color: #14283a; margin: 0 0 10px;">¿Está permitida por las normas de la comunidad?</h3>
           <p style="font-size: 14px; line-height: 1.65; color: #52616b; margin: 0;">
-            Sim. A rede transparente respeita a Ley de Propiedad Horizontal (LPH) na Espanha por não alterar a cor ou arquitetura da fachada.
+            Sí. La red transparente respeta la Ley de Propiedad Horizontal (LPH) en España al no alterar el color ni la arquitectura de la fachada.
           </p>
         </div>
 
         <div class="clean-card">
-          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 20px; color: #14283a; margin: 0 0 10px;">A rede tira a luz ou atrapalha a vista?</h3>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 20px; color: #14283a; margin: 0 0 10px;">¿La red quita la luz o molesta las vistas?</h3>
           <p style="font-size: 14px; line-height: 1.65; color: #52616b; margin: 0;">
-            Não. O fio de polietileno de alta densidade é fino e imperceptível à distância, mantendo a luz natural e a paisagem intactas.
+            No. El hilo de polietileno de alta densidad es fino e imperceptible a distancia, manteniendo la luz natural y el paisaje intactos.
           </p>
         </div>
 
         <div class="clean-card">
-          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 20px; color: #14283a; margin: 0 0 10px;">Como pedir orçamento rápido pelo WhatsApp?</h3>
+          <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 20px; color: #14283a; margin: 0 0 10px;">¿Cómo pedir presupuesto rápido por WhatsApp?</h3>
           <p style="font-size: 14px; line-height: 1.65; color: #52616b; margin: 0;">
-            Basta tirar uma foto da sua sacada ou janela e nos enviar pelo WhatsApp. Em poucas horas enviamos a cotação exata sem compromisso.
+            Solo tienes que sacar una foto de tu balcón o ventana y enviárnosla por WhatsApp. En pocas horas te enviamos la cotización exacta sin compromiso.
           </p>
         </div>
 
@@ -1040,14 +1056,14 @@
   <section class="section-responsive" style="background: #14283a; color: #ffffff; text-align: center;">
     <div class="clean-container" style="max-width: 640px;">
       <h2 class="cta-final-title">
-        Liberdade para abrir a janela.<br/><em style="color: #5fd6e3; font-style: italic;">Sem medo.</em>
+        Libertad para abrir la ventana.<br/><em style="color: #5fd6e3; font-style: italic;">Sin miedo.</em>
       </h2>
       <p style="font-size: 16px; color: #cdd6db; line-height: 1.65; margin: 0 0 32px; font-weight: 300;">
-        Instalação rápida em uma única visita. Resistencia certificada de 150 kg/m² com 2 a 3 anos de garantia por escrito.
+        Instalación rápida en una única visita. Resistencia certificada de 150 kg/m² con 2 a 3 años de garantía por escrito.
       </p>
       
       <a href="{{ waLinkFooter }}" target="_blank" class="btn-primary" style="font-size: 15px; padding: 18px 36px;">
-        Solicitar orçamento sem compromisso &rarr;
+        Solicitar presupuesto sin compromiso &rarr;
       </a>
     </div>
   </section>
@@ -1111,7 +1127,7 @@ class Component extends DCLogic {
 
   renderVals() {
     const waNumber = '34627322086';
-    const msg = encodeURIComponent('Olá! Quero um orçamento rápido para redes de proteção em Valencia. Mando foto da minha sacada/janela.');
+    const msg = encodeURIComponent('¡Hola! Quiero un presupuesto rápido para redes de protección en Valencia. Mando foto de mi balcón/ventana.');
     const waLink = `https://wa.me/${waNumber}?text=${msg}`;
     return {
       sliderPos: this.state.sliderPos,

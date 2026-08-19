@@ -19,6 +19,7 @@
 <title>Red de Protección para Ventanas y Balcones en Valencia | RedSegura</title>
 
 <!-- Favicon -->
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="./assets/logo-redsegura-valencia.png">
 <link rel="shortcut icon" href="./assets/logo-redsegura-valencia.png">
 <link rel="apple-touch-icon" href="./assets/logo-redsegura-valencia.png">
@@ -1220,7 +1221,7 @@
         <div class="clean-card">
           <h3 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 20px; color: #14283a; margin: 0 0 10px;">¿Cómo pedir presupuesto rápido por WhatsApp?</h3>
           <p style="font-size: 14px; line-height: 1.65; color: #52616b; margin: 0;">
-            Solo tienes que sacar una foto de tu balcón o ventana y enviárnosla por WhatsApp. En pocas horas te enviamos la cotización exacta sin compromiso.
+            Solo tienes que sacar una foto de tu balcón o ventana, tomar las medidas (alto y ancho) y enviárnoslas por WhatsApp. En pocas horas te enviamos la cotización exacta sin compromiso.
           </p>
         </div>
 
@@ -1396,7 +1397,7 @@ class Component extends DCLogic {
 
   renderVals() {
     const waNumber = '34627322086';
-    const msg = encodeURIComponent('¡Hola! Quiero un presupuesto rápido para redes de protección en Valencia. Mando foto de mi balcón/ventana.');
+    const msg = encodeURIComponent('¡Hola! Quiero un presupuesto rápido para redes de protección en Valencia. Mando foto y medidas de mi balcón/ventana.');
     const waLink = `https://wa.me/${waNumber}?text=${msg}`;
     return {
       sliderPos: this.state.sliderPos,

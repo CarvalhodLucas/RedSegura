@@ -337,6 +337,46 @@
     -webkit-overflow-scrolling: touch;
   }
 
+  /* Table Scroll Hint Styling */
+  .table-scroll-hint {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 1px solid rgba(18, 138, 152, 0.18);
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 13.5px;
+    color: #14283a;
+    margin: -12px auto 24px;
+    width: fit-content;
+    box-shadow: 0 4px 12px rgba(18, 138, 152, 0.05);
+  }
+  .table-scroll-hint strong {
+    color: #128a98;
+    margin: 0 4px;
+  }
+  @keyframes bounceHorizontal {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(6px); }
+  }
+
+  /* Custom styling for scrollbar on mobile/tablets to make it visible */
+  .table-card-wrapper::-webkit-scrollbar {
+    height: 5px;
+  }
+  .table-card-wrapper::-webkit-scrollbar-track {
+    background: rgba(20, 40, 58, 0.03);
+    border-radius: 4px;
+  }
+  .table-card-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(18, 138, 152, 0.3);
+    border-radius: 4px;
+  }
+  .table-card-wrapper::-webkit-scrollbar-thumb:hover {
+    background: rgba(18, 138, 152, 0.6);
+  }
+
   .depoimentos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -533,11 +573,14 @@
       font-size: 15px;
     }
 
+    .table-scroll-hint {
+      display: inline-flex;
+    }
     .table-card-wrapper {
       padding: 20px 14px;
     }
     .table-card-wrapper table {
-      min-width: 500px;
+      min-width: 580px;
       font-size: 13px !important;
     }
 
@@ -755,6 +798,495 @@
     .galeria-rodape { padding: 16px 20px; flex-direction: column; align-items: flex-start; }
     .lightbox-prev, .lightbox-next { width: 40px; height: 40px; font-size: 22px; }
   }
+
+  /* ── CALCULADORA DE PRECIOS ULTRA PREMIUM ── */
+  .calc-section {
+    background: #f8f6f0;
+    border-top: 1px solid rgba(20,40,58,0.06);
+    border-bottom: 1px solid rgba(20,40,58,0.06);
+    position: relative;
+    padding: 100px 0;
+  }
+  .calc-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 36px;
+    align-items: start;
+    margin-top: 44px;
+  }
+  .calc-card-main {
+    background: #ffffff;
+    border: 1px solid rgba(20,40,58,0.08);
+    border-radius: 16px;
+    padding: 36px 32px;
+    box-shadow: 0 12px 36px rgba(20,40,58,0.04);
+  }
+  .calc-presets-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .preset-btn {
+    border: 1px solid rgba(20,40,58,0.12);
+    background: #fdfcfb;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #52616b;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: inherit;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  }
+  .preset-btn:hover {
+    border-color: #128a98;
+    color: #128a98;
+    background: rgba(18,138,152,0.05);
+    transform: translateY(-1px);
+  }
+  .preset-btn.active {
+    background: #14283a;
+    color: #ffffff;
+    border-color: #14283a;
+    box-shadow: 0 4px 14px rgba(20,40,58,0.22);
+  }
+  .dimension-group {
+    background: #fcfbf9;
+    border: 1px solid rgba(20,40,58,0.08);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+    transition: border-color 0.2s;
+  }
+  .dimension-group:focus-within {
+    border-color: rgba(18,138,152,0.4);
+  }
+  .dimension-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .dimension-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #14283a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .dimension-val-badge {
+    font-family: 'Newsreader', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #128a98;
+    background: rgba(18,138,152,0.1);
+    padding: 3px 12px;
+    border-radius: 6px;
+    letter-spacing: 0.02em;
+  }
+  .slider-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .calc-slider {
+    flex: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    border-radius: 4px;
+    background: #e5eaed;
+    outline: none;
+    cursor: pointer;
+  }
+  .calc-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #e8672e;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(232,103,46,0.45);
+    border: 2.5px solid #ffffff;
+    transition: transform 0.15s ease, background-color 0.15s;
+  }
+  .calc-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+    background: #d4561f;
+  }
+  .calc-slider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #e8672e;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(232,103,46,0.45);
+    border: 2.5px solid #ffffff;
+  }
+  .calc-num-input-wrap {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid rgba(20,40,58,0.18);
+    border-radius: 8px;
+    padding: 2px 8px 2px 4px;
+    transition: all 0.2s;
+  }
+  .calc-num-input-wrap:focus-within {
+    border-color: #e8672e;
+    box-shadow: 0 0 0 3px rgba(232,103,46,0.15);
+  }
+  .calc-num-input {
+    width: 65px;
+    padding: 8px 4px 8px 8px;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #14283a;
+    text-align: right;
+    font-family: inherit;
+    outline: none;
+    background: transparent;
+  }
+  .calc-num-unit {
+    font-size: 13px;
+    color: #74818a;
+    font-weight: 500;
+    margin-left: 2px;
+  }
+  .calc-mesh-preview-box {
+    background: #f3efe8;
+    border: 1px dashed rgba(20,40,58,0.18);
+    border-radius: 12px;
+    padding: 24px 20px;
+    margin: 22px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 190px;
+  }
+  .mesh-canvas-visual {
+    background-color: #ffffff;
+    background-image: 
+      linear-gradient(135deg, rgba(18,138,152,0.3) 25%, transparent 25%), 
+      linear-gradient(225deg, rgba(18,138,152,0.3) 25%, transparent 25%), 
+      linear-gradient(45deg, rgba(18,138,152,0.3) 25%, transparent 25%), 
+      linear-gradient(315deg, rgba(18,138,152,0.3) 25%, transparent 25%);
+    background-position: 8px 0, 8px 0, 0 0, 0 0;
+    background-size: 16px 16px;
+    border: 2.5px solid #14283a;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(20,40,58,0.08);
+    transition: width 0.25s ease, height 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 100%;
+  }
+  .mesh-live-tag {
+    background: rgba(20,40,58,0.92);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 6px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    text-align: center;
+  }
+  .calc-items-table {
+    margin-top: 20px;
+    border-top: 1px solid rgba(20,40,58,0.08);
+    padding-top: 18px;
+  }
+  .calc-item-entry {
+    background: #fdfcfb;
+    border: 1px solid rgba(20,40,58,0.08);
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.15s, box-shadow 0.15s;
+  }
+  .calc-item-entry:hover {
+    background: #f5f2eb;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .calc-item-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #14283a;
+    display: flex;
+    align-items: center;
+  }
+  .calc-item-sub {
+    font-size: 12px;
+    color: #74818a;
+    margin-top: 3px;
+  }
+  .calc-item-price {
+    font-family: 'Newsreader', serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #128a98;
+    text-align: right;
+  }
+  .calc-item-rule-tag {
+    font-size: 10px;
+    background: rgba(232,103,46,0.12);
+    color: #e8672e;
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin-left: 8px;
+    font-weight: 600;
+  }
+  .btn-add-item {
+    width: 100%;
+    background: rgba(18,138,152,0.07);
+    border: 1.5px dashed #128a98;
+    color: #128a98;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 13px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    font-family: inherit;
+  }
+  .btn-add-item:hover {
+    background: #128a98;
+    color: #ffffff;
+    border-style: solid;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(18,138,152,0.25);
+  }
+  .calc-postes-box {
+    background: #fcfbf9;
+    border: 1px solid rgba(20,40,58,0.08);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-top: 18px;
+  }
+  .calc-postes-toggle-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #14283a;
+    cursor: pointer;
+    user-select: none;
+  }
+  .calc-postes-toggle-label:hover {
+    color: #128a98;
+  }
+  .calc-postes-body {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(20,40,58,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .poste-control-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13.5px;
+    color: #52616b;
+  }
+  .counter-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .btn-counter {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid rgba(20,40,58,0.15);
+    background: #ffffff;
+    color: #14283a;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    font-family: inherit;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  }
+  .btn-counter:hover {
+    background: #128a98;
+    color: #ffffff;
+    border-color: #128a98;
+  }
+  .counter-display {
+    font-weight: 700;
+    font-size: 15px;
+    min-width: 24px;
+    text-align: center;
+    color: #14283a;
+  }
+
+  /* Summary Card (Right Column) */
+  .calc-summary-card {
+    background: linear-gradient(145deg, #14283a 0%, #0d1e2d 100%);
+    color: #ffffff;
+    border-radius: 18px;
+    padding: 36px 30px;
+    box-shadow: 0 20px 48px rgba(20,40,58,0.22);
+    position: sticky;
+    top: 100px;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .calc-badge-rate {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(95,214,227,0.14);
+    border: 1px solid rgba(95,214,227,0.3);
+    color: #5fd6e3;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+  }
+  .calc-price-display {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+  .calc-price-num {
+    font-family: 'Newsreader', serif;
+    font-size: 52px;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .calc-price-currency {
+    font-size: 26px;
+    color: #5fd6e3;
+    font-weight: 600;
+  }
+  .calc-price-note {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 22px;
+  }
+  .calc-details-list {
+    border-top: 1px solid rgba(255,255,255,0.12);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    padding: 18px 0;
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 13.5px;
+    color: #cbd5e1;
+  }
+  .calc-detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .calc-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 12.5px;
+    color: #94a3b8;
+    margin-bottom: 26px;
+  }
+  .calc-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .calc-feature-icon {
+    color: #25D366;
+    font-weight: bold;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+  .btn-calc-whatsapp {
+    width: 100%;
+    background: #25D366;
+    color: #ffffff;
+    padding: 17px 24px;
+    font-size: 15.5px;
+    font-weight: 600;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: inherit;
+  }
+  .btn-calc-whatsapp:hover {
+    background: #20b858;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(37, 211, 102, 0.5);
+  }
+  .calc-guarantee-note {
+    font-size: 11.5px;
+    color: #74818a;
+    margin-top: 16px;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 991px) {
+    .calc-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .calc-summary-card {
+      position: static;
+    }
+  }
+  @media (max-width: 540px) {
+    .calc-card-main {
+      padding: 24px 18px;
+    }
+    .calc-summary-card {
+      padding: 28px 20px;
+    }
+    .calc-price-num {
+      font-size: 42px;
+    }
+  }
 </style>
 </helmet>
 
@@ -772,6 +1304,7 @@
       <a href="#diferenciais" style="font-size: 14px; color: #52616b; font-weight: 500;">Diferenciales</a>
       <a href="#simulador" style="font-size: 14px; color: #52616b; font-weight: 500;">Antes / Después</a>
       <a href="#comparador" style="font-size: 14px; color: #52616b; font-weight: 500;">Comparativo</a>
+      <a href="#calculadora" style="font-size: 14px; color: #e8672e; font-weight: 600;">Calculadora</a>
       <a href="#depoimentos" style="font-size: 14px; color: #52616b; font-weight: 500;">Opiniones</a>
       <a href="#faq" style="font-size: 14px; color: #52616b; font-weight: 500;">Preguntas</a>
       <a href="#galeria" style="font-size: 14px; color: #52616b; font-weight: 500;">Galería</a>
@@ -797,6 +1330,7 @@
       <a href="#diferenciais" onclick="{{ closeMobileMenu }}">Diferenciales</a>
       <a href="#simulador" onclick="{{ closeMobileMenu }}">Antes / Después</a>
       <a href="#comparador" onclick="{{ closeMobileMenu }}">Comparativo</a>
+      <a href="#calculadora" onclick="{{ closeMobileMenu }}" style="color: #e8672e; font-weight: 600;">Calculadora de Precio</a>
       <a href="#depoimentos" onclick="{{ closeMobileMenu }}">Opiniones</a>
       <a href="#faq" onclick="{{ closeMobileMenu }}">Preguntas</a>
       <a href="#galeria" onclick="{{ closeMobileMenu }}">Galería</a>
@@ -1021,7 +1555,7 @@
           Los felinos son curiosos por naturaleza. El "síndrome del gato paracaidista" es una realidad preocupante en Valencia: caídas accidentales desde ventanas o terrazas sin protección. Instalar una red para gatos es la solución recomendada por veterinarios para garantizar su seguridad total.
         </p>
         <p style="font-size: 15px; line-height: 1.7; color: #52616b; margin: 0 0 28px;">
-          Una cirugía ortopédica de emergencia puede costar entre 800 € y 3.000 €. La red de protección es una inversión única para prevenir accidentes para siempre.
+          Evita costosas emergencias veterinarias y sustos innecesarios. La red de protección es una inversión única para prevenir accidentes para siempre.
         </p>
 
         <a href="{{ waLinkHero }}" target="_blank" class="btn-primary">
@@ -1032,8 +1566,8 @@
 
       <div style="display: flex; flex-direction: column; gap: 20px;">
         <div style="background: #ffffff; padding: 28px 24px; border-radius: 8px; border: 1px solid rgba(20,40,58,0.06);">
-          <div style="font-family: 'Newsreader', serif; font-size: 36px; color: #e8672e; font-weight: 500;">800 &ndash; 3.000 €</div>
-          <div style="font-size: 13px; color: #74818a; margin-top: 6px;">Coste medio de cirugía veterinaria tras una caída</div>
+          <div style="font-family: 'Newsreader', serif; font-size: 32px; color: #e8672e; font-weight: 500;">Tranquilidad Total</div>
+          <div style="font-size: 13px; color: #74818a; margin-top: 6px;">Protección preventiva 24/7 y cero sustos en casa</div>
         </div>
         <div style="background: #ffffff; padding: 28px 24px; border-radius: 8px; border: 1px solid rgba(20,40,58,0.06);">
           <div style="font-family: 'Newsreader', serif; font-size: 36px; color: #128a98; font-weight: 500;">1 Única Visita</div>
@@ -1084,44 +1618,272 @@
         </h2>
       </div>
 
+      <!-- Mobile Scroll Hint -->
+      <div class="table-scroll-hint">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 6px; animation: bounceHorizontal 1.5s infinite; color: #128a98; flex-shrink: 0;">
+          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+        </svg>
+        Desliza para ver la comparativa completa
+      </div>
+
       <div class="table-card-wrapper">
         <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 15px;">
           <thead>
             <tr style="border-bottom: 2px solid #f8f6f0;">
               <th style="padding: 16px 12px; color: #74818a; font-weight: 600; width: 40%;">Especificación</th>
-              <th style="padding: 16px 12px; color: #74818a; font-weight: 600; text-align: center; width: 30%;">Nylon Común</th>
               <th style="padding: 16px 12px; color: #128a98; font-weight: 700; text-align: center; width: 30%;">RedSegura Valencia</th>
+              <th style="padding: 16px 12px; color: #74818a; font-weight: 600; text-align: center; width: 30%;">Nylon Común</th>
             </tr>
           </thead>
           <tbody>
             <tr style="border-bottom: 1px solid #f8f6f0;">
               <td style="padding: 16px 12px; color: #14283a;">Resistencia a la Carga</td>
-              <td style="padding: 16px 12px; text-align: center; color: #74818a;">~20 kg/m²</td>
               <td style="padding: 16px 12px; text-align: center; color: #128a98; font-weight: 600;">150 kg/m² Certificados</td>
+              <td style="padding: 16px 12px; text-align: center; color: #74818a;">~20 kg/m²</td>
             </tr>
             <tr style="border-bottom: 1px solid #f8f6f0;">
               <td style="padding: 16px 12px; color: #14283a;">Material del Hilo</td>
-              <td style="padding: 16px 12px; text-align: center; color: #74818a;">Nylon Reciclado</td>
               <td style="padding: 16px 12px; text-align: center; color: #128a98; font-weight: 600;">Polietileno Virgen Anti-UV</td>
+              <td style="padding: 16px 12px; text-align: center; color: #74818a;">Nylon Reciclado</td>
             </tr>
             <tr style="border-bottom: 1px solid #f8f6f0;">
               <td style="padding: 16px 12px; color: #14283a;">Norma de Seguridad</td>
-              <td style="padding: 16px 12px; text-align: center; color: #74818a;">Sin Certificación</td>
               <td style="padding: 16px 12px; text-align: center; color: #128a98; font-weight: 600;">Norma Europea EN 1263-1</td>
+              <td style="padding: 16px 12px; text-align: center; color: #74818a;">Sin Certificación</td>
             </tr>
             <tr style="border-bottom: 1px solid #f8f6f0;">
               <td style="padding: 16px 12px; color: #14283a;">Durabilidad al Sol</td>
-              <td style="padding: 16px 12px; text-align: center; color: #74818a;">Se agrieta en 1-2 años</td>
               <td style="padding: 16px 12px; text-align: center; color: #128a98; font-weight: 600;">Larga Vida Útil Sin Agrietarse</td>
+              <td style="padding: 16px 12px; text-align: center; color: #74818a;">Se agrieta en 1-2 años</td>
             </tr>
             <tr>
               <td style="padding: 16px 12px; color: #14283a;">Garantía por Escrito</td>
-              <td style="padding: 16px 12px; text-align: center; color: #74818a;">Sin Garantía Formal</td>
               <td style="padding: 16px 12px; text-align: center; color: #128a98; font-weight: 600;">2 a 3 Años de Garantía</td>
+              <td style="padding: 16px 12px; text-align: center; color: #74818a;">Sin Garantía Formal</td>
             </tr>
           </tbody>
         </table>
       </div>
+    </div>
+  </section>
+
+  <!-- CALCULADORA DE PRESUPUESTO INTERACTIVA -->
+  <section id="calculadora" class="section-responsive calc-section">
+    <div class="clean-container">
+      
+      <div style="text-align: center; max-width: 680px; margin: 0 auto 16px;">
+        <span style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #e8672e; font-weight: 600;">Presupuesto Orientativo Inmediato</span>
+        <h2 class="section-header-title">
+          Calcula el precio aproximado de tus redes en Valencia
+        </h2>
+        <p class="section-header-desc" style="font-size: 15px; color: #52616b; margin: 0; line-height: 1.6;">
+          Obtén una <strong>estimación orientativa al instante</strong>. El precio final y exacto se confirma sin compromiso enviando una foto de tu balcón o ventana.
+        </p>
+      </div>
+
+      <div class="calc-grid">
+        
+        <!-- Columna Izquierda: Controles del Elemento -->
+        <div class="calc-card-main">
+          
+          <!-- Selector de Espacio / Presets -->
+          <div style="margin-bottom: 20px;">
+            <label style="font-size: 13.5px; font-weight: 600; color: #14283a; display: block; margin-bottom: 10px;">
+              1. Selecciona o personaliza el tipo de espacio:
+            </label>
+            <div class="calc-presets-container" id="calc-presets">
+              <button type="button" class="preset-btn active" data-name="Balcón Principal" data-w="3.50" data-h="1.50">
+                🚪 Balcón Típico (3.5 × 1.5m)
+              </button>
+              <button type="button" class="preset-btn" data-name="Ventana" data-w="1.20" data-h="1.20">
+                🪟 Ventana (1.2 × 1.2m)
+              </button>
+              <button type="button" class="preset-btn" data-name="Balconera" data-w="2.00" data-h="2.20">
+                🚪 Ventanal / Balconera (2.0 × 2.2m)
+              </button>
+              <button type="button" class="preset-btn" data-name="Terraza" data-w="5.00" data-h="2.00">
+                🌿 Terraza Amplia (5.0 × 2.0m)
+              </button>
+              <button type="button" class="preset-btn" data-name="A Medida" data-w="2.50" data-h="1.50">
+                📐 A Medida
+              </button>
+            </div>
+          </div>
+
+          <!-- Medida 1: Ancho / Largo -->
+          <div class="dimension-group">
+            <div class="dimension-header">
+              <div class="dimension-label">
+                <span>↔️ Ancho / Largo:</span>
+              </div>
+              <span class="dimension-val-badge" id="badge-width">3.50 m</span>
+            </div>
+            <div class="slider-row">
+              <input type="range" id="slider-width" class="calc-slider" min="0.50" max="10.00" step="0.05" oninput="window.calcSetWidth(this.value)" />
+              <div class="calc-num-input-wrap">
+                <input type="number" id="input-width" class="calc-num-input" min="0.50" max="25.00" step="0.05" oninput="window.calcSetWidth(this.value)" onchange="window.calcSetWidth(this.value)" />
+                <span class="calc-num-unit">m</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Medida 2: Alto -->
+          <div class="dimension-group">
+            <div class="dimension-header">
+              <div class="dimension-label">
+                <span>↕️ Alto:</span>
+              </div>
+              <span class="dimension-val-badge" id="badge-height">1.50 m</span>
+            </div>
+            <div class="slider-row">
+              <input type="range" id="slider-height" class="calc-slider" min="0.50" max="4.00" step="0.05" oninput="window.calcSetHeight(this.value)" />
+              <div class="calc-num-input-wrap">
+                <input type="number" id="input-height" class="calc-num-input" min="0.50" max="10.00" step="0.05" oninput="window.calcSetHeight(this.value)" onchange="window.calcSetHeight(this.value)" />
+                <span class="calc-num-unit">m</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Previsualización Dinámica de la Malla -->
+          <div class="calc-mesh-preview-box">
+            <div style="position: absolute; top: 8px; left: 12px; font-size: 11px; color: #74818a; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">
+              Visualización Proporcional
+            </div>
+            <div id="mesh-visual" class="mesh-canvas-visual" style="width: 220px; height: 110px;">
+              <div class="mesh-live-tag">
+                <span id="mesh-tag-area">5.25 m²</span>
+                <span id="mesh-tag-calc" style="font-size: 11px; opacity: 0.85; display: block;">(3.50m × 1.50m)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botón para añadir a la lista de espacios -->
+          <button type="button" id="btn-add-item" class="btn-add-item" onclick="window.calcAddItem()">
+            <span>+ Añadir otro espacio (ej. otra ventana o balcón)</span>
+          </button>
+
+          <!-- Lista de Espacios Añadidos -->
+          <div id="calc-items-container" class="calc-items-table" style="display: none;">
+            <div style="font-size: 13px; font-weight: 600; color: #14283a; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+              <span>Espacios incluidos en tu presupuesto:</span>
+              <span id="calc-items-count" style="color: #128a98; font-weight: 700;">1 elemento</span>
+            </div>
+            <div id="calc-items-list">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- Sección Opcional: Postes de Soporte / Sin Techo -->
+          <div class="calc-postes-box">
+            <div class="calc-postes-toggle-label" id="postes-toggle-btn">
+              <span>¿Tu balcón o terraza no tiene techo? (Estructura Opcional)</span>
+              <span id="postes-toggle-icon" style="color: #128a98; font-size: 16px; font-weight: bold;">+</span>
+            </div>
+            <div id="calc-postes-body" class="calc-postes-body" style="display: none;">
+              <p style="font-size: 12px; color: #74818a; margin: 0 0 8px; line-height: 1.45;">
+                Si el espacio es abierto por arriba (ático o balcón sin forjado superior), instalamos postes fijados a la barandilla para sujetar la red con máxima firmeza:
+              </p>
+              
+              <div class="poste-control-row">
+                <div>
+                  <strong style="color: #14283a;">Poste de Soporte Recto</strong>
+                  <div style="font-size: 11.5px; color: #74818a;">30,00 € / unidad</div>
+                </div>
+                <div class="counter-group">
+                  <button type="button" class="btn-counter" id="btn-minus-recto">-</button>
+                  <span id="count-postes-recto" class="counter-display">0</span>
+                  <button type="button" class="btn-counter" id="btn-plus-recto">+</button>
+                </div>
+              </div>
+
+              <div class="poste-control-row">
+                <div>
+                  <strong style="color: #14283a;">Poste con Ángulo 45° Anti-Escape</strong>
+                  <div style="font-size: 11.5px; color: #74818a;">45,00 € / unidad (ideal para gatos trepadores)</div>
+                </div>
+                <div class="counter-group">
+                  <button type="button" class="btn-counter" id="btn-minus-angulo">-</button>
+                  <span id="count-postes-angulo" class="counter-display">0</span>
+                  <button type="button" class="btn-counter" id="btn-plus-angulo">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Columna Derecha: Tarjeta Resumen & CTA WhatsApp -->
+        <div class="calc-summary-card">
+          <div class="calc-badge-rate">
+            <span>●</span> Estimación Orientativa Online
+          </div>
+          
+          <div style="font-size: 13.5px; color: #94a3b8; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em;">
+            Presupuesto Aproximado:
+          </div>
+          <div class="calc-price-display">
+            <span style="font-family: 'Newsreader', serif; font-size: 38px; color: #5fd6e3; font-weight: 400; margin-right: -2px;">~</span>
+            <span id="calc-total-price" class="calc-price-num">147,00</span>
+            <span class="calc-price-currency">€</span>
+          </div>
+          <div class="calc-price-note" id="calc-price-subtitle">
+            * Estimación orientativa para 5.25 m² calculados (1 espacio)
+          </div>
+
+          <div class="calc-details-list">
+            <div class="calc-detail-row">
+              <span>Superficie total estimada:</span>
+              <strong id="calc-total-area" style="color: #fff;">5.25 m²</strong>
+            </div>
+            <div class="calc-detail-row">
+              <span>Elementos / Huecos:</span>
+              <span id="calc-total-items-qty" style="color: #fff;">1</span>
+            </div>
+            <div class="calc-detail-row" id="row-postes-extra" style="display: none;">
+              <span>Estructura / Postes:</span>
+              <span id="calc-total-postes-cost" style="color: #5fd6e3;">+0,00 €</span>
+            </div>
+            <div class="calc-detail-row">
+              <span>Mano de obra y anclajes:</span>
+              <span style="color: #5fd6e3;">Incluidos en estimación</span>
+            </div>
+          </div>
+
+          <div class="calc-features-list">
+            <div class="calc-feature-item">
+              <span class="calc-feature-icon">✓</span>
+              <span>Red polietileno virgen EN 1263-1 (150 kg/m²)</span>
+            </div>
+            <div class="calc-feature-item">
+              <span class="calc-feature-icon">✓</span>
+              <span>Anclajes inoxidables y cable perimetral tensado</span>
+            </div>
+            <div class="calc-feature-item">
+              <span class="calc-feature-icon">✓</span>
+              <span>Instalación profesional en 1 sola visita</span>
+            </div>
+            <div class="calc-feature-item">
+              <span class="calc-feature-icon">✓</span>
+              <span>Garantía de 2 a 3 años por escrito</span>
+            </div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.06); border-left: 3px solid #5fd6e3; padding: 10px 14px; border-radius: 6px; font-size: 12px; color: #cbd5e1; margin-bottom: 20px; line-height: 1.45;">
+            <strong>ℹ️ Valor orientativo:</strong> El presupuesto exacto definitivo te lo confirmamos sin compromiso por WhatsApp enviándonos una foto de tu balcón o ventana.
+          </div>
+
+          <a id="btn-whatsapp-calc" href="#" target="_blank" class="btn-calc-whatsapp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.159.57 4.184 1.564 5.939l-1.564 5.717 5.864-1.538c1.691.921 3.63 1.444 5.69 1.444 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12zm0 22c-1.879 0-3.633-.518-5.138-1.423l-.368-.222-3.821 1.002 1.02-3.725-.243-.387c-1.007-1.603-1.547-3.468-1.547-5.404 0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
+            <span>Confirmar presupuesto exacto por WhatsApp</span>
+          </a>
+
+          <div class="calc-guarantee-note">
+            * Estimación orientativa sin compromiso. Envíanos fotos por WhatsApp para validar el presupuesto final exacto y consultar disponibilidad.
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
@@ -1397,7 +2159,7 @@ class Component extends DCLogic {
 
   renderVals() {
     const waNumber = '34627322086';
-    const msg = encodeURIComponent('¡Hola! Quiero un presupuesto rápido para redes de protección en Valencia. Mando foto y medidas de mi balcón/ventana.');
+    const msg = encodeURIComponent('¡Hola! Me gustaría solicitar un presupuesto para la instalación de redes de protección en Valencia. A continuación les envío fotos y medidas de mi balcón/ventana.');
     const waLink = `https://wa.me/${waNumber}?text=${msg}`;
     return {
       sliderPos: this.state.sliderPos,
@@ -1503,6 +2265,262 @@ class Component extends DCLogic {
     var diff = tx - e.changedTouches[0].clientX;
     if (Math.abs(diff) > 50) navegar(diff > 0 ? 1 : -1);
   }, { passive: true });
+})();
+</script>
+
+<script>
+/* CALCULADORA DE PRECIOS — LÓGICA CRM-REDES (28€/m², mín 80€/elem, postes 30€/45€) */
+(function() {
+  const PRICE_PER_M2 = 28.00;
+  const MIN_PRICE_PER_ITEM = 80.00;
+  const PRICE_POSTE_RECTO = 30.00;
+  const PRICE_POSTE_ANGULO = 45.00;
+  const WA_NUMBER = '34627322086';
+
+  let currentItemName = 'Balcón Principal';
+  let currentWidth = 3.50;
+  let currentHeight = 1.50;
+  let itemsList = []; // list of { id, name, width, height, area, price, isMin }
+  let postesRecto = 0;
+  let postesAngulo = 0;
+  let postesOpen = false;
+
+  function formatEur(num) {
+    return num.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function calcSingleItem(w, h, name) {
+    const area = parseFloat((w * h).toFixed(2));
+    const calculated = area * PRICE_PER_M2;
+    const price = Math.max(calculated, MIN_PRICE_PER_ITEM);
+    const isMin = calculated < MIN_PRICE_PER_ITEM;
+    return {
+      id: Date.now() + Math.random().toString(36).substr(2, 5),
+      name: name || 'Espacio',
+      width: w,
+      height: h,
+      area: area,
+      price: parseFloat(price.toFixed(2)),
+      isMin: isMin
+    };
+  }
+
+  window.calcUpdate = function() {
+    const currentCalc = calcSingleItem(currentWidth, currentHeight, currentItemName);
+
+    // Badges & Inputs
+    const badgeW = document.getElementById('badge-width');
+    const badgeH = document.getElementById('badge-height');
+    const sliderW = document.getElementById('slider-width');
+    const inputW = document.getElementById('input-width');
+    const sliderH = document.getElementById('slider-height');
+    const inputH = document.getElementById('input-height');
+
+    if (badgeW) badgeW.textContent = currentWidth.toFixed(2) + ' m';
+    if (badgeH) badgeH.textContent = currentHeight.toFixed(2) + ' m';
+    if (sliderW && parseFloat(sliderW.value) !== currentWidth) sliderW.value = currentWidth;
+    if (inputW && parseFloat(inputW.value) !== currentWidth) inputW.value = currentWidth.toFixed(2);
+    if (sliderH && parseFloat(sliderH.value) !== currentHeight) sliderH.value = currentHeight;
+    if (inputH && parseFloat(inputH.value) !== currentHeight) inputH.value = currentHeight.toFixed(2);
+
+    // Mesh Preview
+    const meshVisual = document.getElementById('mesh-visual');
+    const meshTagArea = document.getElementById('mesh-tag-area');
+    const meshTagCalc = document.getElementById('mesh-tag-calc');
+    if (meshVisual) {
+      const ratio = currentWidth / (currentHeight || 1);
+      let previewW = 200;
+      let previewH = Math.round(previewW / ratio);
+      if (previewH > 130) {
+        previewH = 130;
+        previewW = Math.round(previewH * ratio);
+      }
+      previewW = Math.max(90, Math.min(280, previewW));
+      previewH = Math.max(50, Math.min(130, previewH));
+      meshVisual.style.width = previewW + 'px';
+      meshVisual.style.height = previewH + 'px';
+    }
+    if (meshTagArea) meshTagArea.textContent = currentCalc.area.toFixed(2) + ' m²';
+    if (meshTagCalc) meshTagCalc.textContent = '(' + currentWidth.toFixed(2) + 'm × ' + currentHeight.toFixed(2) + 'm)';
+
+    // Totals
+    const activeItems = itemsList.length > 0 ? itemsList : [currentCalc];
+    const totalArea = activeItems.reduce((acc, it) => acc + it.area, 0);
+    const itemsTotal = activeItems.reduce((acc, it) => acc + it.price, 0);
+    const postesCost = (postesRecto * PRICE_POSTE_RECTO) + (postesAngulo * PRICE_POSTE_ANGULO);
+    const grandTotal = itemsTotal + postesCost;
+
+    // Right Summary Card
+    const elTotalPrice = document.getElementById('calc-total-price');
+    const elPriceSub = document.getElementById('calc-price-subtitle');
+    const elTotalArea = document.getElementById('calc-total-area');
+    const elTotalQty = document.getElementById('calc-total-items-qty');
+    const rowPostes = document.getElementById('row-postes-extra');
+    const elPostesCost = document.getElementById('calc-total-postes-cost');
+
+    if (elTotalPrice) elTotalPrice.textContent = formatEur(grandTotal);
+    if (elPriceSub) {
+      elPriceSub.textContent = `* Estimación orientativa para ${totalArea.toFixed(2)} m² calculados (${activeItems.length} ${activeItems.length === 1 ? 'espacio' : 'espacios'})`;
+    }
+    if (elTotalArea) elTotalArea.textContent = totalArea.toFixed(2) + ' m²';
+    if (elTotalQty) {
+      elTotalQty.textContent = activeItems.length + (activeItems.length === 1 ? ' hueco / espacio' : ' huecos / espacios');
+    }
+
+    if (rowPostes && elPostesCost) {
+      if (postesCost > 0) {
+        rowPostes.style.display = 'flex';
+        elPostesCost.textContent = `+${formatEur(postesCost)} € (${postesRecto + postesAngulo} postes)`;
+      } else {
+        rowPostes.style.display = 'none';
+      }
+    }
+
+    // Items List
+    const itemsContainer = document.getElementById('calc-items-container');
+    const itemsListEl = document.getElementById('calc-items-list');
+    const itemsCountEl = document.getElementById('calc-items-count');
+
+    if (itemsContainer && itemsListEl) {
+      if (itemsList.length > 0) {
+        itemsContainer.style.display = 'block';
+        if (itemsCountEl) itemsCountEl.textContent = `${itemsList.length} ${itemsList.length === 1 ? 'espacio añadido' : 'espacios añadidos'}`;
+        itemsListEl.innerHTML = itemsList.map((item, idx) => `
+          <div class="calc-item-entry">
+            <div>
+              <div class="calc-item-title">${item.name}</div>
+              <div class="calc-item-sub">${item.width.toFixed(2)}m × ${item.height.toFixed(2)}m (${item.area.toFixed(2)} m²)</div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div class="calc-item-price">~ ${formatEur(item.price)} €</div>
+              <button type="button" class="item-row-remove" onclick="window.removeCalcItem(${idx})" title="Eliminar espacio">&times;</button>
+            </div>
+          </div>
+        `).join('');
+      } else {
+        itemsContainer.style.display = 'none';
+      }
+    }
+
+    // WhatsApp CTA link
+    const btnWa = document.getElementById('btn-whatsapp-calc');
+    if (btnWa) {
+      let waMsg = '¡Hola! He calculado una estimación aproximada en su web:\n\n';
+      activeItems.forEach((it) => {
+        waMsg += `• ${it.name}: ${it.width.toFixed(2)}m × ${it.height.toFixed(2)}m (${it.area.toFixed(2)} m²) ≈ ${formatEur(it.price)}€\n`;
+      });
+      if (postesRecto > 0) {
+        waMsg += `• Estructura: ${postesRecto} poste(s) recto(s) (~${formatEur(postesRecto * PRICE_POSTE_RECTO)}€)\n`;
+      }
+      if (postesAngulo > 0) {
+        waMsg += `• Estructura: ${postesAngulo} poste(s) 45° (~${formatEur(postesAngulo * PRICE_POSTE_ANGULO)}€)\n`;
+      }
+      waMsg += `\n💰 *Total aproximado estimado:* ~${formatEur(grandTotal)}€\n\n`;
+      waMsg += 'Les envío fotos de mi balcón/ventana para que puedan confirmarme el presupuesto final exacto y disponibilidad sin compromiso.';
+      btnWa.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waMsg)}`;
+    }
+  };
+
+  window.calcSetWidth = function(val) {
+    const num = parseFloat(String(val).replace(',', '.'));
+    if (!isNaN(num) && num > 0) {
+      currentWidth = Math.max(0.1, num);
+      window.calcUpdate();
+    }
+  };
+
+  window.calcSetHeight = function(val) {
+    const num = parseFloat(String(val).replace(',', '.'));
+    if (!isNaN(num) && num > 0) {
+      currentHeight = Math.max(0.1, num);
+      window.calcUpdate();
+    }
+  };
+
+  window.calcAddItem = function() {
+    const newItem = calcSingleItem(currentWidth, currentHeight, currentItemName);
+    itemsList.push(newItem);
+    window.calcUpdate();
+  };
+
+  window.removeCalcItem = function(idx) {
+    if (idx >= 0 && idx < itemsList.length) {
+      itemsList.splice(idx, 1);
+      window.calcUpdate();
+    }
+  };
+
+  window.togglePostesSection = function() {
+    postesOpen = !postesOpen;
+    const body = document.getElementById('calc-postes-body');
+    const icon = document.getElementById('postes-toggle-icon');
+    if (body) body.style.display = postesOpen ? 'flex' : 'none';
+    if (icon) icon.textContent = postesOpen ? '−' : '+';
+  };
+
+  window.adjustPostes = function(type, change) {
+    if (type === 'recto') {
+      postesRecto = Math.max(0, postesRecto + change);
+      const el = document.getElementById('count-postes-recto');
+      if (el) el.textContent = postesRecto;
+    } else if (type === 'angulo') {
+      postesAngulo = Math.max(0, postesAngulo + change);
+      const el = document.getElementById('count-postes-angulo');
+      if (el) el.textContent = postesAngulo;
+    }
+    window.calcUpdate();
+  };
+
+  // Global Capturing Event Delegation on document
+  document.addEventListener('input', function(e) {
+    if (!e.target) return;
+    if (e.target.id === 'slider-width' || e.target.id === 'input-width') {
+      window.calcSetWidth(e.target.value);
+    } else if (e.target.id === 'slider-height' || e.target.id === 'input-height') {
+      window.calcSetHeight(e.target.value);
+    }
+  }, true);
+
+  document.addEventListener('change', function(e) {
+    if (!e.target) return;
+    if (e.target.id === 'slider-width' || e.target.id === 'input-width') {
+      window.calcSetWidth(e.target.value);
+    } else if (e.target.id === 'slider-height' || e.target.id === 'input-height') {
+      window.calcSetHeight(e.target.value);
+    }
+  }, true);
+
+  document.addEventListener('click', function(e) {
+    const btn = e.target.closest ? e.target.closest('.preset-btn') : null;
+    if (btn) {
+      const container = btn.closest('#calc-presets');
+      if (container) {
+        container.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const w = parseFloat(btn.getAttribute('data-w'));
+        const h = parseFloat(btn.getAttribute('data-h'));
+        const name = btn.getAttribute('data-name');
+        if (!isNaN(w)) currentWidth = w;
+        if (!isNaN(h)) currentHeight = h;
+        if (name) currentItemName = name;
+        window.calcUpdate();
+      }
+    }
+  }, true);
+
+  // Sync / Initialize
+  function init() {
+    window.calcUpdate();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+  // Repeat check after mount for dynamic x-dc runtime
+  setTimeout(init, 300);
+  setTimeout(init, 1000);
 })();
 </script>
 </body>
